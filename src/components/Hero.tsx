@@ -46,9 +46,10 @@ export default function Hero({ className = "" }: HeroProps) {
                   <span className="block">SHINDEPATIL</span>
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                  A MERN Stack Developer focused on building scalable, high-performance web applications. 
-                  Proficient with the full software development lifecycle (SDLC), deploying robust solutions 
-                  on AWS, and leveraging AI technologies to create intuitive user experiences.
+                  Results-driven Software Engineer specializing in secure, scalable systems, distributed computing, and API security.
+                  Experienced in Unix/Linux environments, machine learning, and information retrieval. Strong foundation in Java,
+                  C++, and Python, with skills in data structures, algorithms, and modern web protocols. Currently advancing
+                  expertise in AWS, Next.js, and containerization (Docker, Kubernetes) to build large-scale, mission-critical systems.
                 </p>
               </div>
 
@@ -178,8 +179,9 @@ export default function Hero({ className = "" }: HeroProps) {
                   <div className="flex justify-center">
                     <Avatar className="h-32 w-32">
                       <AvatarImage
-                        src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756128944070-migxpz26ote.jpeg"
+                        src="/profile.jpeg"
                         alt="Omdarshan Uttam Shindepatil"
+                        className="object-cover"
                       />
                       <AvatarFallback className="text-2xl font-display font-semibold bg-primary text-primary-foreground">
                         OS
