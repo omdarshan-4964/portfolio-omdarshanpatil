@@ -12,7 +12,7 @@ interface Award {
   title: string
   description: string
   date: string
-  category: 'Academic' | 'Leadership' | 'Competition' | 'Certification'
+  category: 'Leadership' | 'Competition'
   imageUrl: string
   organization: string
 }
@@ -21,16 +21,16 @@ const AWARDS: Award[] = [
   {
     id: 'academic-achievement',
     title: 'Academic Excellence Recognition',
-    description: 'Recognition for outstanding academic performance and project development',
-    date: '2024-2025',
-    category: 'Academic',
+    description: 'Winner (Semester VI) in PBL Day Competition for "DAiMMP - Decentralized AI Model in Marketplace"',
+    date: '2025',
+    category: 'Competition',
     imageUrl: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756128945403-5oujh7ywwd9.jpg',
     organization: 'KIT\'s College of Engineering Kolhapur'
   },
   {
     id: 'competition-winner',
     title: 'PBL Day Competition Winner',
-    description: 'Winner (Semester VI) for developing innovative solution concepts including "Evento" and "DAiMMP"',
+    description: '1st Runner Up (Semester III) in PBL Day Competition for "Evento - College Events Management Systems"',
     date: '2025',
     category: 'Competition',
     imageUrl: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756128947010-jvz9dk7rwia.jpg',
@@ -38,30 +38,30 @@ const AWARDS: Award[] = [
   },
   {
     id: 'excellence-award',
-    title: 'Excellence in Innovation Award',
-    description: 'Recognized for outstanding innovation and technical excellence in project development',
+    title: 'Tehnical Co-Head Pioneer 2024',
+    description: 'Recognized for outstanding performance as a Technical Co-Head in Pioneer 2024',
     date: '2024',
-    category: 'Academic',
+    category: 'Leadership',
     imageUrl: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756128948676-r7cyjib55id.jpg',
-    organization: 'KIT\'s College of Engineering Kolhapur'
+    organization: 'Pioneer 2024, KITCOEK - Indian Society for Technical Education'
   },
   {
     id: 'leadership-group',
     title: 'Technical Leadership Team',
-    description: 'Led technical teams and organized national-level events with 3000+ participants',
-    date: '2024-2025',
+    description: 'A special moment of all volunteers with their beloved Secretary',
+    date: '2025',
     category: 'Leadership',
     imageUrl: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756128951102-3ec8nkic5kf.jpg',
-    organization: 'Pioneer, KITCOEK - ISTE Student Chapter'
+    organization: 'Pioneer 2025, KITCOEK - Indian Society for Technical Education'
   },
   {
     id: 'pioneer-secretary',
     title: 'Secretary - Pioneer 2025',
-    description: 'Secretary (2025) & Technical Co-Head (2024) - Led 19-member core team and 150+ volunteers for national-level technical event',
+    description: 'Led 19-member core team and 150+ volunteers for national-level technical event',
     date: '2025',
     category: 'Leadership',
     imageUrl: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756128953713-pglw1ww1ndn.jpg',
-    organization: 'Pioneer, KITCOEK - Indian Society for Technical Education'
+    organization: 'Pioneer 2025, KITCOEK - Indian Society for Technical Education'
   }
 ]
 

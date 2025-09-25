@@ -48,7 +48,7 @@ interface ResumeData {
 }
 
 const resumeData: ResumeData = {
-  summary: "A MERN Stack Developer focused on building scalable, high-performance web applications. Proficient with the full software development lifecycle (SDLC), deploying robust solutions on AWS, and leveraging AI technologies to create intuitive user experiences.",
+  summary: "Results-driven Software Engineer specializing in secure, scalable systems, distributed computing, and API security. Experienced in Unix/Linux environments, machine learning, and information retrieval. Strong foundation in Java, C++, and Python, with skills in data structures, algorithms, and modern web protocols. Currently advancing expertise in AWS, Next.js, and containerization (Docker, Kubernetes) to build large-scale, mission-critical systems.",
   education: [
     {
       institution: "KIT's College of Engineering Kolhapur (Empowered Autonomous)",
@@ -73,12 +73,12 @@ const resumeData: ResumeData = {
     }
   ],
   skills: {
-  languages: ["Java", "JavaScript (ES6+)", "TypeScript (Learning)", "Python", "C++", "C", "HTML5", "CSS3"],
+  languages: ["Java", "JavaScript (ES6+)", "TypeScript", "Python", "C++", "C", "HTML5", "CSS3"],
   securityIdentity: ["JWT Authentication", "OAuth 2.0", "OpenID Connect (OIDC)", "RESTful API Security", "Role-based Access Control (RBAC)"],
-  frontend: ["React.js", "Next.js (Learning)", "Tailwind CSS", "Responsive Design"],
+  frontend: ["React.js", "Next.js", "Tailwind CSS", "Responsive Design"],
   backend: ["Node.js", "Express.js", "RESTful APIs", "Secure Business Logic", "Authentication Middleware"],
   databases: ["MongoDB", "MySQL", "Data Integrity Management", "Query Optimization"],
-  cloudDevOps: ["AWS (Learning)", "Docker (Learning)", "Kubernetes (Familiar)", "Git", "CI/CD Concepts"],
+  cloudDevOps: ["AWS", "Docker", "Kubernetes (Familiar)", "Git", "CI/CD Concepts"],
   csFundamentals: ["Data Structures & Algorithms", "OOP", "DBMS", "Computer Networking", "SDLC", "Operating Systems"],
   toolsPlatforms: ["Postman", "VS Code", "GitHub", "Vercel", "Render", "Agile/Scrum Methodologies", "Linux CLI"]
 },
