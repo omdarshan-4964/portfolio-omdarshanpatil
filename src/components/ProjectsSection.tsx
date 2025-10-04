@@ -42,7 +42,7 @@ const PROJECTS: Project[] = [
     "description": "A full-stack web application for real-time, multi-user code editing, built with Next.js and WebSockets.",
     "longDescription": "CodeStream is a full-stack web application that provides a real-time, multi-user collaborative code editing environment directly in the browser. Inspired by tools like VS Code Live Share and Replit, it allows developers to create a workspace, share a unique link, and code together instantly, demonstrating a deep understanding of distributed systems and real-time data synchronization.",
     "techStack": ["Next.js", "TypeScript", "Node.js", "WebSockets", "PostgreSQL", "Prisma", "Docker"],
-    "category": "Full Stack",
+    "category": "TypeScript-Next.js",
     "duration": "August 2025 - September 2025",
     "role": "Full Stack Developer",
     "thumbnailUrl": "/Projects/codestream-1.png",
@@ -68,7 +68,7 @@ const PROJECTS: Project[] = [
     description: 'A full-stack MERN application designed to solve venue booking conflicts and streamline event management.',
     longDescription: 'Evento is a comprehensive event management platform that addresses the critical issue of venue booking conflicts in educational institutions. The system provides a centralized solution for managing events, bookings, and resources while preventing scheduling conflicts through intelligent conflict detection.',
     techStack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'RBAC'],
-    category: 'MERN',
+    category: 'Full Stack',
     duration: 'September 2023 - July 2025',
     role: 'Full Stack Developer',
     thumbnailUrl: '/Projects/evento-1.png',
@@ -95,9 +95,9 @@ const PROJECTS: Project[] = [
     description: 'A blockchain-powered marketplace for secure AI model exchange with Ethereum integration.',
     longDescription: 'DAiMMP revolutionizes AI model distribution through decentralized technology. This marketplace enables secure, transparent, and traceable exchange of AI models while protecting intellectual property through blockchain-based validation and smart contracts.',
     techStack: ['React.js', 'Node.js', 'Ethereum', 'Blockchain', 'AI/ML APIs', 'Smart Contracts'],
-    category: 'AIML',
+    category: 'Machine Learning',
     duration: 'January 2025 - May 2025',
-    role: 'Blockchain Developer',
+    role: 'Backend Developer',
     thumbnailUrl: "/Projects/daimmp-1.png",
     screenshots: [
       "/Projects/daimmp-1.png",
@@ -123,7 +123,7 @@ const PROJECTS: Project[] = [
     description: 'A MERN-based platform to streamline blood donation requests and connect donors with recipients.',
     longDescription: 'LifeLink addresses critical blood shortage issues by creating an efficient network connecting blood donors with recipients. The platform features real-time availability tracking, emergency notifications, and comprehensive donor management to save lives through technology.',
     techStack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Tailwind CSS'],
-    category: 'MERN',
+    category: 'Full Stack',
     duration: 'November 2024',
     role: 'Full Stack Developer',
     thumbnailUrl:  "/Projects/lifelink-1.png",
@@ -144,7 +144,7 @@ const PROJECTS: Project[] = [
   }
 ]
 
-const CATEGORIES = ['All', 'MERN', 'Blockchain']
+const CATEGORIES = ['All', 'Full Stack', 'Machine Learning', "TypeScript-Next.js"]
 
 interface ProjectsSectionProps {
   className?: string
