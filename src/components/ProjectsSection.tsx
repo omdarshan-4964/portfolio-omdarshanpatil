@@ -37,6 +37,32 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
+    "id": "codestream",
+    "title": "CodeStream - Real-Time Collaborative Code Editor",
+    "description": "A full-stack web application for real-time, multi-user code editing, built with Next.js and WebSockets.",
+    "longDescription": "CodeStream is a full-stack web application that provides a real-time, multi-user collaborative code editing environment directly in the browser. Inspired by tools like VS Code Live Share and Replit, it allows developers to create a workspace, share a unique link, and code together instantly, demonstrating a deep understanding of distributed systems and real-time data synchronization.",
+    "techStack": ["Next.js", "TypeScript", "Node.js", "WebSockets", "PostgreSQL", "Prisma", "Docker"],
+    "category": "Full Stack",
+    "duration": "August 2025 - September 2025",
+    "role": "Full Stack Developer",
+    "thumbnailUrl": "/Projects/codestream-1.png",
+    "screenshots": [
+      "/Projects/codestream-1.png",
+      "/Projects/codestream-2.png"
+      
+    ],
+    "githubUrl": "https://github.com/omdarshan-4964/CodeStream",
+    "liveUrl": "https://code-stream-rho.vercel.app",
+    "features": [
+      "Architected a distributed, real-time collaborative editor using Next.js and TypeScript.",
+      "Engineered a core real-time engine with a Node.js WebSocket server for low-latency synchronization.",
+      "Implemented an isolated, session-based 'room' architecture for secure collaboration.",
+      "Deployed the multi-service application using a full CI/CD pipeline (Docker, Vercel, Render).",
+      "Built a responsive frontend with Monaco Editor for a VS Code-like experience.",
+      "Developed a RESTful API for all file system operations (read, write, list)."
+    ]
+  },
+  {
     id: 'evento',
     title: 'Evento - College Event Management System',
     description: 'A full-stack MERN application designed to solve venue booking conflicts and streamline event management.',
@@ -45,11 +71,12 @@ const PROJECTS: Project[] = [
     category: 'MERN',
     duration: 'September 2023 - July 2025',
     role: 'Full Stack Developer',
-    thumbnailUrl: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756129029151-i82b6p4un.png',
+    thumbnailUrl: '/Projects/evento-1.png',
     screenshots: [
-      'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756129029151-i82b6p4un.png',
-      'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756129029151-i82b6p4un.png',
-      'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756129029151-i82b6p4un.png'
+      "/Projects/evento-2.png",
+      "/Projects/evento-3.png",
+      "/Projects/evento-4.png",
+      "/Projects/evento-5.png"
     ],
     githubUrl: 'https://github.com/omdarshan-4964/Evento-College_Events_Management_System',
     liveUrl: 'https://evento-zeta-nine.vercel.app',
@@ -68,14 +95,16 @@ const PROJECTS: Project[] = [
     description: 'A blockchain-powered marketplace for secure AI model exchange with Ethereum integration.',
     longDescription: 'DAiMMP revolutionizes AI model distribution through decentralized technology. This marketplace enables secure, transparent, and traceable exchange of AI models while protecting intellectual property through blockchain-based validation and smart contracts.',
     techStack: ['React.js', 'Node.js', 'Ethereum', 'Blockchain', 'AI/ML APIs', 'Smart Contracts'],
-    category: 'Blockchain',
+    category: 'AIML',
     duration: 'January 2025 - May 2025',
     role: 'Blockchain Developer',
-    thumbnailUrl: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756129033686-bslhdlcn2v4.png',
+    thumbnailUrl: "/Projects/daimmp-1.png",
     screenshots: [
-      'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756129033686-bslhdlcn2v4.png',
-      'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756129033686-bslhdlcn2v4.png',
-      'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756129033686-bslhdlcn2v4.png'
+      "/Projects/daimmp-1.png",
+      "/Projects/daimmp-2.png",
+      "/Projects/daimmp-3.png",
+      "/Projects/daimmp-4.png",
+
     ],
     githubUrl: 'https://github.com/omdarshan-4964/DAiMMP',
     liveUrl: 'https://aimodels-frontend.onrender.com/',
@@ -97,11 +126,10 @@ const PROJECTS: Project[] = [
     category: 'MERN',
     duration: 'November 2024',
     role: 'Full Stack Developer',
-    thumbnailUrl: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756129031242-ooyqoll9ilg.png',
+    thumbnailUrl:  "/Projects/lifelink-1.png",
     screenshots: [
-      'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756129031242-ooyqoll9ilg.png',
-      'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756129031242-ooyqoll9ilg.png',
-      'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/1756129031242-ooyqoll9ilg.png'
+      "/Projects/lifelink-1.png",
+      "/Projects/lifelink-2.png"
     ],
     githubUrl: 'https://github.com/omdarshan-4964/Blood-donation-management-system-SEM_V_PBL_Project',
     liveUrl: 'https://life-link-9ajo.onrender.com/',
