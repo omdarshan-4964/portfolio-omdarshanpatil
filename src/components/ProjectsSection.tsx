@@ -264,10 +264,15 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
   return (
     <section className={`py-16 ${className}`}>
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12 space-y-2">
-          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight">Featured Projects</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my technical expertise across full-stack development, blockchain solutions, and modern web applications.
+        <div className="text-center mb-12 space-y-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight">
+            Featured <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">Projects</span>
+          </h2>
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Production-grade applications showcasing expertise in <span className="text-foreground font-semibold">Full-Stack Development</span>, 
+            <span className="text-foreground font-semibold"> AI Integration</span>, and 
+            <span className="text-foreground font-semibold"> Real-Time Systems</span>. 
+            Serving <span className="text-primary font-bold">1000+ users</span> across 5 deployed applications.
           </p>
         </div>
 

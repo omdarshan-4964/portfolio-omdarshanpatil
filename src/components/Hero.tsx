@@ -40,17 +40,56 @@ export default function Hero({ className = "" }: HeroProps) {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Column - Text Content */}
             <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight">
-                  OMDARSHAN{" "}
-                  <span className="block">SHINDE PATIL</span>
+              <div className="space-y-6">
+                {/* Availability Badge */}
+                <div className="inline-block">
+                  <span className="px-4 py-1.5 bg-green-500/10 text-green-600 dark:text-green-400 rounded-full text-sm font-medium border border-green-500/20">
+                    🚀 Available for Full-Time Opportunities
+                  </span>
+                </div>
+                
+                {/* Name with Gradient */}
+                <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold tracking-tight">
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-blue-600 to-purple-600">
+                    OMDARSHAN
+                  </span>{" "}
+                  <span className="block mt-2">SHINDE PATIL</span>
                 </h1>
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                  Full-Stack Software Engineer with proven expertise in building production-ready applications serving <span className="text-primary font-semibold">1000+ users</span>.
-                  Specialized in <span className="text-primary font-semibold">secure, scalable MERN stack systems</span>, <span className="text-primary font-semibold">AI integration</span>, real-time distributed computing, and API security.
-                  Delivered <span className="text-primary font-semibold">5 major projects</span> with 95%+ uptime, managing complete SDLC from architecture to deployment.
-                  Strong foundation in DSA, system design, and modern cloud technologies (AWS, Docker, Kubernetes).
+                
+                {/* Title */}
+                <h2 className="text-2xl md:text-3xl font-semibold text-foreground/90">
+                  Full-Stack Software Engineer
+                </h2>
+                
+                {/* Description */}
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl">
+                  Building production-grade applications serving{" "}
+                  <span className="text-primary font-bold">1000+ users</span> with{" "}
+                  <span className="text-primary font-bold">95%+ uptime</span>. 
+                  Specialized in <span className="font-semibold text-foreground">MERN Stack</span>,{" "}
+                  <span className="font-semibold text-foreground">AI Integration</span>, and{" "}
+                  <span className="font-semibold text-foreground">Real-Time Systems</span>.
                 </p>
+                
+                {/* Key Stats */}
+                <div className="flex flex-wrap gap-8 pt-2">
+                  <div className="space-y-1">
+                    <div className="text-3xl md:text-4xl font-bold text-primary">5</div>
+                    <div className="text-xs md:text-sm text-muted-foreground">Production Apps</div>
+                  </div>
+                  <div className="space-y-1">
+                    <div className="text-3xl md:text-4xl font-bold text-primary">1K+</div>
+                    <div className="text-xs md:text-sm text-muted-foreground">Active Users</div>
+                  </div>
+                  <div className="space-y-1">
+                    <div className="text-3xl md:text-4xl font-bold text-primary">138</div>
+                    <div className="text-xs md:text-sm text-muted-foreground">LeetCode Solved</div>
+                  </div>
+                  <div className="space-y-1">
+                    <div className="text-3xl md:text-4xl font-bold text-primary">95%</div>
+                    <div className="text-xs md:text-sm text-muted-foreground">Avg Uptime</div>
+                  </div>
+                </div>
               </div>
 
               {/* Contact Actions */}

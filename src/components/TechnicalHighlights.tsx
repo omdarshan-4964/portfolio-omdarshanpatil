@@ -106,12 +106,12 @@ export default function TechnicalHighlights() {
     <div className="space-y-16">
       {/* Technical Highlights Grid */}
       <div className="space-y-6">
-        <div className="text-center space-y-2">
-          <h2 className="text-3xl font-display font-bold tracking-tight">
-            Technical Highlights
+        <div className="text-center space-y-3">
+          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight">
+            Technical <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">Highlights</span>
           </h2>
-          <p className="text-muted-foreground">
-            Key strengths and measurable achievements in software engineering
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+            Measurable achievements and quantifiable impact across production systems
           </p>
         </div>
 
@@ -141,12 +141,12 @@ export default function TechnicalHighlights() {
 
       {/* Competitive Coding Profiles */}
       <div className="space-y-6">
-        <div className="text-center space-y-2">
-          <h2 className="text-3xl font-display font-bold tracking-tight">
-            Coding Profiles
+        <div className="text-center space-y-3">
+          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight">
+            Coding <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">Profiles</span>
           </h2>
-          <p className="text-muted-foreground">
-            Actively building problem-solving skills across competitive platforms
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+            Consistent problem-solving practice across competitive programming platforms
           </p>
         </div>
 
