@@ -37,6 +37,37 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
+    "id": "cerebra",
+    "title": "Cerebra - AI-Powered Learning Map Generator",
+    "description": "AI-powered learning roadmap generator creating personalized, interactive node-based learning maps using Google Gemini. Built with Next.js 14 and React Flow.",
+    "longDescription": "Cerebra is an intelligent learning roadmap platform that leverages Google's Gemini AI to generate personalized, interactive node-based learning maps for any topic. The system features intelligent auto-layout algorithms, difficulty-based filtering, and a modern glassmorphic UI. Users can create custom learning paths, filter by difficulty levels, export their progress, and access curated templates for popular topics like Web Development, Machine Learning, and Python.",
+    "techStack": ["Next.js 14", "React 18", "TypeScript", "Google Gemini AI", "React Flow", "Tailwind CSS", "Vercel"],
+    "category": "Machine Learning",
+    "duration": "October 2025 - December 2025",
+    "role": "Full Stack Developer",
+    "thumbnailUrl": "/Projects/Cerebra/Thumbnail.png",
+    "screenshots": [
+      "/Projects/Cerebra/Thumbnail.png",
+      "/Projects/Cerebra/Start.png",
+      "/Projects/Cerebra/Generated maps.png",
+      "/Projects/Cerebra/Features.png"
+    ],
+    "githubUrl": "https://github.com/omdarshan-4964/Cerebra",
+    "liveUrl": "https://cerebra-ten.vercel.app/",
+    "features": [
+      "🧩 AI-powered learning path generation using Google Gemini API with intelligent content curation",
+      "🗺️ Interactive node-based visualization with React Flow and drag-and-drop functionality",
+      "🎚️ Advanced difficulty filtering system (beginner/intermediate/advanced) for personalized learning",
+      "🧭 Intelligent auto-layout algorithm using Dagre for optimal map organization",
+      "💾 Export functionality supporting JSON format for progress tracking and sharing",
+      "🎨 Modern glassmorphic UI with gradient aesthetics and smooth animations",
+      "⌨️ Keyboard shortcuts support for enhanced productivity",
+      "🔍 Real-time search with match highlighting across learning nodes",
+      "📚 Built-in curated templates (Web Dev, ML, Python, Data Science, Cloud Computing)",
+      "⚡ Fast performance with Next.js 14 and TypeScript achieving 98+ Lighthouse score"
+    ]
+  },
+  {
     "id": "codestream",
     "title": "CodeStream - Real-Time Collaborative Code Editor",
     "description": "Production-ready collaborative coding platform with <50ms latency, supporting 50+ concurrent users per room. Built with Next.js and WebSockets.",

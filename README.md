@@ -11,29 +11,35 @@ A modern, high-performance portfolio website built with Next.js 15, TypeScript, 
 
 ### 📊 Real Impact & Metrics
 - **1000+ Active Users** across deployed applications
-- **4 Production Apps** with 95%+ uptime
+- **5 Production Apps** with 95%+ uptime
 - **500+ Events Managed** with 95% conflict-free scheduling
 - **<50ms Latency** in real-time collaborative systems
 - **1000+ Blockchain Transactions** processed securely
+- **138 LeetCode Problems** solved (Rating: 1,525)
 
 ### 🎯 Featured Projects
 
-#### 1. **CodeStream** - Real-Time Collaborative Code Editor
+#### 1. **Cerebra** - AI-Powered Learning Map Generator
+- **Tech Stack:** Next.js 14, React 18, TypeScript, Google Gemini AI, React Flow
+- **Impact:** AI-powered personalized learning roadmaps with interactive visualization
+- **Live:** [cerebra-ten.vercel.app](https://cerebra-ten.vercel.app/)
+
+#### 2. **CodeStream** - Real-Time Collaborative Code Editor
 - **Tech Stack:** Next.js, TypeScript, WebSockets, PostgreSQL, Docker
 - **Impact:** 500+ collaborative sessions, <50ms sync latency, 50+ concurrent users
 - **Live:** [code-stream-rho.vercel.app](https://code-stream-rho.vercel.app)
 
-#### 2. **Evento** - Event Management System
+#### 3. **Evento** - Event Management System
 - **Tech Stack:** MERN (MongoDB, Express, React, Node.js)
 - **Impact:** 1000+ users, 2000+ bookings, 90% conflict reduction
 - **Live:** [evento-zeta-nine.vercel.app](https://evento-zeta-nine.vercel.app)
 
-#### 3. **DAiMMP** - Decentralized AI Marketplace
+#### 4. **DAiMMP** - Decentralized AI Marketplace
 - **Tech Stack:** React, Node.js, Ethereum, Blockchain, Smart Contracts
 - **Impact:** 1000+ transactions, 300+ users, 98% uptime
 - **Live:** [aimodels-frontend.onrender.com](https://aimodels-frontend.onrender.com/)
 
-#### 4. **LifeLink** - Blood Donation Platform
+#### 5. **LifeLink** - Blood Donation Platform
 - **Tech Stack:** MERN Stack, JWT, Tailwind CSS
 - **Impact:** 150+ donations facilitated, 92% match rate, <5min response time
 - **Live:** [life-link-9ajo.onrender.com](https://life-link-9ajo.onrender.com/)

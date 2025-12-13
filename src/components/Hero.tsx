@@ -47,8 +47,8 @@ export default function Hero({ className = "" }: HeroProps) {
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
                   Full-Stack Software Engineer with proven expertise in building production-ready applications serving <span className="text-primary font-semibold">1000+ users</span>.
-                  Specialized in <span className="text-primary font-semibold">secure, scalable MERN stack systems</span>, real-time distributed computing, and API security.
-                  Delivered <span className="text-primary font-semibold">4 major projects</span> with 95%+ uptime, managing complete SDLC from architecture to deployment.
+                  Specialized in <span className="text-primary font-semibold">secure, scalable MERN stack systems</span>, <span className="text-primary font-semibold">AI integration</span>, real-time distributed computing, and API security.
+                  Delivered <span className="text-primary font-semibold">5 major projects</span> with 95%+ uptime, managing complete SDLC from architecture to deployment.
                   Strong foundation in DSA, system design, and modern cloud technologies (AWS, Docker, Kubernetes).
                 </p>
               </div>
@@ -198,7 +198,7 @@ export default function Hero({ className = "" }: HeroProps) {
 
                     <div className="grid grid-cols-3 gap-3 pt-2">
                       <div className="text-center">
-                        <div className="text-2xl font-display font-bold text-primary">4</div>
+                        <div className="text-2xl font-display font-bold text-primary">5</div>
                         <div className="text-xs text-muted-foreground uppercase tracking-wide">
                           Production Apps
                         </div>

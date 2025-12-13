@@ -342,7 +342,7 @@ export default function TechnicalHighlights() {
         <CardContent className="p-8">
           <div className="grid md:grid-cols-4 gap-6 text-center">
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-primary">4</div>
+              <div className="text-4xl font-bold text-primary">5</div>
               <div className="text-sm text-muted-foreground font-medium">
                 Production Apps Deployed
               </div>
