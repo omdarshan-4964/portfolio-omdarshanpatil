@@ -174,7 +174,7 @@ Built with a consistent design system:
 
 ## 📫 Connect
 
-- **Email:** omdarshanpatil.official@gmail.com
+- **Email:** omdarshanpatil@gmail.com
 - **GitHub:** [@omdarshan-4964](https://github.com/omdarshan-4964)
 - **LinkedIn:** [omdarshanshindepatil](https://www.linkedin.com/in/omdarshanshindepatil/)
 - **Twitter/X:** [@Omdarshan_jsx](https://x.com/Omdarshan_jsx)

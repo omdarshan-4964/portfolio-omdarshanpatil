@@ -12,7 +12,7 @@ interface ContactFormProps {
 export default function ContactForm({ className }: ContactFormProps) {
   const copyEmail = async () => {
     try {
-      await navigator.clipboard.writeText("omdarshanpatil.official@gmail.com")
+      await navigator.clipboard.writeText("omdarshanpatil@gmail.com")
       toast.success("Email copied to clipboard!")
     } catch {
       toast.error("Failed to copy email")
@@ -23,9 +23,9 @@ export default function ContactForm({ className }: ContactFormProps) {
     {
       icon: Mail,
       label: "Email",
-      value: "omdarshanpatil.official@gmail.com",
+      value: "omdarshanpatil@gmail.com",
       action: () => {
-        window.open("mailto:omdarshanpatil.official@gmail.com", "_blank")
+        window.open("mailto:omdarshanpatil@gmail.com", "_blank")
       },
       secondaryAction: {
         label: "Copy",

@@ -1,15 +1,12 @@
 "use client"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { 
-  Code2, 
   Zap, 
   Shield, 
   Database, 
-  Cloud, 
-  GitBranch,
-  Award,
+  Cloud,
   TrendingUp,
   Users,
   Server
@@ -68,53 +65,6 @@ const highlights: TechnicalHighlight[] = [
   }
 ]
 
-interface SkillProficiency {
-  category: string
-  skills: Array<{
-    name: string
-    level: number // 0-100
-  }>
-}
-
-const skillProficiencies: SkillProficiency[] = [
-  {
-    category: "Frontend",
-    skills: [
-      { name: "React.js", level: 90 },
-      { name: "Next.js", level: 85 },
-      { name: "TypeScript", level: 85 },
-      { name: "Tailwind CSS", level: 90 }
-    ]
-  },
-  {
-    category: "Backend",
-    skills: [
-      { name: "Node.js", level: 88 },
-      { name: "Express.js", level: 90 },
-      { name: "RESTful APIs", level: 92 },
-      { name: "WebSockets", level: 85 }
-    ]
-  },
-  {
-    category: "Database",
-    skills: [
-      { name: "MongoDB", level: 87 },
-      { name: "PostgreSQL", level: 80 },
-      { name: "Prisma ORM", level: 82 },
-      { name: "Query Optimization", level: 78 }
-    ]
-  },
-  {
-    category: "DevOps & Cloud",
-    skills: [
-      { name: "Docker", level: 80 },
-      { name: "AWS", level: 75 },
-      { name: "Git/GitHub", level: 92 },
-      { name: "CI/CD", level: 78 }
-    ]
-  }
-]
-
 interface CodingProfile {
   platform: string
   username: string
@@ -127,9 +77,9 @@ interface CodingProfile {
 const codingProfiles: CodingProfile[] = [
   {
     platform: "LeetCode",
-    username: "omdarshanpatil_kitcoek",
+    username: "omdarshanshindepatil_kitcoek",
     stats: "138 problems solved • Rating: 1,525",
-    link: "https://leetcode.com/u/omdarshanpatil_kitcoek/",
+    link: "https://leetcode.com/u/omdarshanshindepatil_kitcoek/",
     color: "bg-orange-500/10 text-orange-500 border-orange-500/20",
     description: "81 Easy • 54 Medium • 3 Hard | Top 37.1%"
   },
@@ -189,47 +139,6 @@ export default function TechnicalHighlights() {
         </div>
       </div>
 
-      {/* Skills Proficiency Section */}
-      <div className="space-y-6">
-        <div className="text-center space-y-2">
-          <h2 className="text-3xl font-display font-bold tracking-tight">
-            Skills Proficiency
-          </h2>
-          <p className="text-muted-foreground">
-            Technical expertise across the full stack
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          {skillProficiencies.map((category, index) => (
-            <Card key={index}>
-              <CardHeader>
-                <CardTitle className="text-lg flex items-center gap-2">
-                  <Code2 className="h-5 w-5 text-primary" />
-                  {category.category}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span className="font-medium">{skill.name}</span>
-                      <span className="text-muted-foreground">{skill.level}%</span>
-                    </div>
-                    <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-to-r from-primary to-primary/70 rounded-full transition-all duration-1000"
-                        style={{ width: `${skill.level}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
-
       {/* Competitive Coding Profiles */}
       <div className="space-y-6">
         <div className="text-center space-y-2">
@@ -268,72 +177,6 @@ export default function TechnicalHighlights() {
               </CardContent>
             </Card>
           ))}
-        </div>
-      </div>
-
-      {/* Verified Certifications */}
-      <div className="space-y-6">
-        <div className="text-center space-y-2">
-          <h2 className="text-3xl font-display font-bold tracking-tight">
-            Verified Certifications
-          </h2>
-          <p className="text-muted-foreground">
-            Industry-recognized certifications validating technical expertise
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Card className="border-2 border-green-500/20 bg-green-500/5 hover:border-green-500/40 transition-all duration-300">
-            <CardContent className="p-6 text-center space-y-3">
-              <div className="mx-auto w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center">
-                <Award className="h-8 w-8 text-green-500" />
-              </div>
-              <div className="space-y-1">
-                <h3 className="font-bold text-lg">Java (Basic)</h3>
-                <Badge className="bg-green-500 text-white">Verified</Badge>
-                <p className="text-xs text-muted-foreground">HackerRank</p>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="border-2 border-blue-500/20 bg-blue-500/5 hover:border-blue-500/40 transition-all duration-300">
-            <CardContent className="p-6 text-center space-y-3">
-              <div className="mx-auto w-16 h-16 rounded-full bg-blue-500/20 flex items-center justify-center">
-                <Database className="h-8 w-8 text-blue-500" />
-              </div>
-              <div className="space-y-1">
-                <h3 className="font-bold text-lg">SQL (Advanced)</h3>
-                <Badge className="bg-blue-500 text-white">Verified</Badge>
-                <p className="text-xs text-muted-foreground">HackerRank</p>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="border-2 border-purple-500/20 bg-purple-500/5 hover:border-purple-500/40 transition-all duration-300">
-            <CardContent className="p-6 text-center space-y-3">
-              <div className="mx-auto w-16 h-16 rounded-full bg-purple-500/20 flex items-center justify-center">
-                <Code2 className="h-8 w-8 text-purple-500" />
-              </div>
-              <div className="space-y-1">
-                <h3 className="font-bold text-lg">Problem Solving</h3>
-                <Badge className="bg-purple-500 text-white">3 Stars</Badge>
-                <p className="text-xs text-muted-foreground">HackerRank</p>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="border-2 border-orange-500/20 bg-orange-500/5 hover:border-orange-500/40 transition-all duration-300">
-            <CardContent className="p-6 text-center space-y-3">
-              <div className="mx-auto w-16 h-16 rounded-full bg-orange-500/20 flex items-center justify-center">
-                <Code2 className="h-8 w-8 text-orange-500" />
-              </div>
-              <div className="space-y-1">
-                <h3 className="font-bold text-lg">Java (5★)</h3>
-                <Badge className="bg-orange-500 text-white">Gold Badge</Badge>
-                <p className="text-xs text-muted-foreground">HackerRank</p>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
 
