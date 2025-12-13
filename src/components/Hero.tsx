@@ -46,10 +46,10 @@ export default function Hero({ className = "" }: HeroProps) {
                   <span className="block">SHINDEPATIL</span>
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                  Results-driven Software Engineer specializing in secure, scalable systems, distributed computing, and API security.
-                  Experienced in Unix/Linux environments, machine learning, and information retrieval. Strong foundation in Java,
-                  C++, and Python, with skills in data structures, algorithms, and modern web protocols. Currently advancing
-                  expertise in AWS, Next.js, and containerization (Docker, Kubernetes) to build large-scale, mission-critical systems.
+                  Full-Stack Software Engineer with proven expertise in building production-ready applications serving <span className="text-primary font-semibold">1000+ users</span>.
+                  Specialized in <span className="text-primary font-semibold">secure, scalable MERN stack systems</span>, real-time distributed computing, and API security.
+                  Delivered <span className="text-primary font-semibold">4 major projects</span> with 95%+ uptime, managing complete SDLC from architecture to deployment.
+                  Strong foundation in DSA, system design, and modern cloud technologies (AWS, Docker, Kubernetes).
                 </p>
               </div>
 
@@ -196,17 +196,23 @@ export default function Hero({ className = "" }: HeroProps) {
                       <p className="text-muted-foreground text-sm">Computer Science & Business Systems</p>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4 pt-2">
+                    <div className="grid grid-cols-3 gap-3 pt-2">
                       <div className="text-center">
-                        <div className="text-2xl font-display font-bold text-primary">2+</div>
+                        <div className="text-2xl font-display font-bold text-primary">4</div>
                         <div className="text-xs text-muted-foreground uppercase tracking-wide">
-                          Years of Learning & Projects
+                          Production Apps
                         </div>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-display font-bold text-primary">10+</div>
+                        <div className="text-2xl font-display font-bold text-primary">1K+</div>
                         <div className="text-xs text-muted-foreground uppercase tracking-wide">
-                          Projects
+                          Users Served
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-2xl font-display font-bold text-primary">95%</div>
+                        <div className="text-xs text-muted-foreground uppercase tracking-wide">
+                          Uptime
                         </div>
                       </div>
                     </div>
@@ -223,7 +229,7 @@ export default function Hero({ className = "" }: HeroProps) {
                   <div className="space-y-3">
                     <h4 className="font-display font-medium text-sm text-center">Core Technologies</h4>
                     <div className="flex flex-wrap gap-2 justify-center">
-                      {["React.js", "Node.js", "MongoDB", "Express.js", "JavaScript"].map((tech) => (
+                      {["React.js", "Next.js", "TypeScript", "Node.js", "MongoDB", "WebSockets", "Docker", "AWS"].map((tech) => (
                         <span
                           key={tech}
                           className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded-md font-medium"

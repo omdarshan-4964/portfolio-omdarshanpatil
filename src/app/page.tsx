@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
+import TechnicalHighlights from "@/components/TechnicalHighlights"
 import ResumeSection from "@/components/ResumeSection"
 import ProjectsSection from "@/components/ProjectsSection"
 import AwardsGallery from "@/components/AwardsGallery"
@@ -20,14 +21,19 @@ export default function Home() {
 
         {/* Main Content Container */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-24 py-16">
-          {/* Resume Section */}
-          <section id="resume">
-            <ResumeSection />
+          {/* Technical Highlights Section */}
+          <section id="highlights">
+            <TechnicalHighlights />
           </section>
 
           {/* Projects Section */}
           <section id="projects">
             <ProjectsSection />
+          </section>
+
+          {/* Resume Section */}
+          <section id="resume">
+            <ResumeSection />
           </section>
 
           {/* Awards Gallery */}
