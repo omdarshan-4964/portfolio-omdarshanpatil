@@ -76,11 +76,14 @@ const PROJECTS: Project[] = [
     "category": "TypeScript-Next.js",
     "duration": "August 2025 - September 2025",
     "role": "Full Stack Developer",
-    "thumbnailUrl": "/Projects/codestream-1.png",
+    "thumbnailUrl": "/Projects/CodeStream/Thumbnail.png",
     "screenshots": [
-      "/Projects/codestream-1.png",
-      "/Projects/codestream-2.png"
-      
+      "/Projects/CodeStream/Thumbnail.png",
+      "/Projects/CodeStream/Features.png",
+      "/Projects/CodeStream/Room Architecture.png",
+      "/Projects/CodeStream/Gemini Assistant.png",
+      "/Projects/CodeStream/Git Control.png",
+      "/Projects/CodeStream/Login.png"
     ],
     "githubUrl": "https://github.com/omdarshan-4964/CodeStream",
     "liveUrl": "https://code-stream-rho.vercel.app",
@@ -103,12 +106,17 @@ const PROJECTS: Project[] = [
     category: 'Full Stack',
     duration: 'September 2023 - July 2025',
     role: 'Full Stack Developer',
-    thumbnailUrl: '/Projects/evento-1.png',
+    thumbnailUrl: '/Projects/Evento/Thumbnail.png',
     screenshots: [
-      "/Projects/evento-2.png",
-      "/Projects/evento-3.png",
-      "/Projects/evento-4.png",
-      "/Projects/evento-5.png"
+      "/Projects/Evento/Thumbnail.png",
+      "/Projects/Evento/Student Dashboard.png",
+      "/Projects/Evento/Admin Dashboard.png",
+      "/Projects/Evento/Club Dashboard.png",
+      "/Projects/Evento/Bookings.png",
+      "/Projects/Evento/Calender.png",
+      "/Projects/Evento/Venue.png",
+      "/Projects/Evento/Analytics.png",
+      "/Projects/Evento/Registrations.png"
     ],
     githubUrl: 'https://github.com/omdarshan-4964/Evento-College_Events_Management_System',
     liveUrl: 'https://evento-zeta-nine.vercel.app',
@@ -131,13 +139,12 @@ const PROJECTS: Project[] = [
     category: 'Machine Learning',
     duration: 'January 2025 - May 2025',
     role: 'Backend Developer',
-    thumbnailUrl: "/Projects/daimmp-1.png",
+    thumbnailUrl: "/Projects/DAIMMP/Thumbnail.png",
     screenshots: [
-      "/Projects/daimmp-1.png",
-      "/Projects/daimmp-2.png",
-      "/Projects/daimmp-3.png",
-      "/Projects/daimmp-4.png",
-
+      "/Projects/DAIMMP/Thumbnail.png",
+      "/Projects/DAIMMP/daimmp-1.png",
+      "/Projects/DAIMMP/daimmp-2.png",
+      "/Projects/DAIMMP/daimmp-3.png"
     ],
     githubUrl: 'https://github.com/omdarshan-4964/DAiMMP',
     liveUrl: 'https://aimodels-frontend.onrender.com/',
@@ -160,10 +167,10 @@ const PROJECTS: Project[] = [
     category: 'Full Stack',
     duration: 'November 2024',
     role: 'Full Stack Developer',
-    thumbnailUrl:  "/Projects/lifelink-1.png",
+    thumbnailUrl:  "/Projects/LifeLink/Thumbnail.png",
     screenshots: [
-      "/Projects/lifelink-1.png",
-      "/Projects/lifelink-2.png"
+      "/Projects/LifeLink/Thumbnail.png",
+      "/Projects/LifeLink/login.png"
     ],
     githubUrl: 'https://github.com/omdarshan-4964/Blood-donation-management-system-SEM_V_PBL_Project',
     liveUrl: 'https://life-link-9ajo.onrender.com/',
