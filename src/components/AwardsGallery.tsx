@@ -136,8 +136,8 @@ export default function AwardsGallery({ className = '' }: AwardsGalleryProps) {
   return (
     <section className={`py-16 ${className}`}>
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-display font-bold mb-4">Achievements & Awards</h2>
+        <div className="text-center mb-12 space-y-2">
+          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight">Awards & Achievements</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Recognition for academic excellence, leadership roles, and technical innovation across competitions and organizational responsibilities.
           </p>

@@ -127,27 +127,27 @@ interface CodingProfile {
 const codingProfiles: CodingProfile[] = [
   {
     platform: "LeetCode",
-    username: "omdarshan_4964",
-    stats: "Working towards 200+ problems",
-    link: "https://leetcode.com/omdarshan_4964",
+    username: "omdarshanpatil_kitcoek",
+    stats: "138 problems solved • Rating: 1,525",
+    link: "https://leetcode.com/u/omdarshanpatil_kitcoek/",
     color: "bg-orange-500/10 text-orange-500 border-orange-500/20",
-    description: "Focusing on Medium/Hard DSA problems"
+    description: "81 Easy • 54 Medium • 3 Hard | Top 37.1%"
   },
   {
     platform: "GitHub",
     username: "omdarshan-4964",
-    stats: "4 major projects • 150+ commits",
+    stats: "236 commits • 20 PRs • 4 projects",
     link: "https://github.com/omdarshan-4964",
     color: "bg-purple-500/10 text-purple-500 border-purple-500/20",
     description: "Active contributor with production apps"
   },
   {
-    platform: "GeeksforGeeks",
+    platform: "HackerRank",
     username: "omdarshanpatil",
-    stats: "Building problem-solving portfolio",
-    link: "https://www.geeksforgeeks.org/user/omdarshanpatil",
+    stats: "Java (5★) • SQL Certified",
+    link: "https://www.hackerrank.com/profile/omdarshanpatil",
     color: "bg-green-500/10 text-green-500 border-green-500/20",
-    description: "Practicing algorithms & data structures"
+    description: "Problem Solving • Java • C++ badges"
   }
 ]
 
@@ -237,7 +237,7 @@ export default function TechnicalHighlights() {
             Coding Profiles
           </h2>
           <p className="text-muted-foreground">
-            Actively building problem-solving skills and open-source presence
+            Actively building problem-solving skills across competitive platforms
           </p>
         </div>
 
@@ -268,6 +268,72 @@ export default function TechnicalHighlights() {
               </CardContent>
             </Card>
           ))}
+        </div>
+      </div>
+
+      {/* Verified Certifications */}
+      <div className="space-y-6">
+        <div className="text-center space-y-2">
+          <h2 className="text-3xl font-display font-bold tracking-tight">
+            Verified Certifications
+          </h2>
+          <p className="text-muted-foreground">
+            Industry-recognized certifications validating technical expertise
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <Card className="border-2 border-green-500/20 bg-green-500/5 hover:border-green-500/40 transition-all duration-300">
+            <CardContent className="p-6 text-center space-y-3">
+              <div className="mx-auto w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center">
+                <Award className="h-8 w-8 text-green-500" />
+              </div>
+              <div className="space-y-1">
+                <h3 className="font-bold text-lg">Java (Basic)</h3>
+                <Badge className="bg-green-500 text-white">Verified</Badge>
+                <p className="text-xs text-muted-foreground">HackerRank</p>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-2 border-blue-500/20 bg-blue-500/5 hover:border-blue-500/40 transition-all duration-300">
+            <CardContent className="p-6 text-center space-y-3">
+              <div className="mx-auto w-16 h-16 rounded-full bg-blue-500/20 flex items-center justify-center">
+                <Database className="h-8 w-8 text-blue-500" />
+              </div>
+              <div className="space-y-1">
+                <h3 className="font-bold text-lg">SQL (Advanced)</h3>
+                <Badge className="bg-blue-500 text-white">Verified</Badge>
+                <p className="text-xs text-muted-foreground">HackerRank</p>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-2 border-purple-500/20 bg-purple-500/5 hover:border-purple-500/40 transition-all duration-300">
+            <CardContent className="p-6 text-center space-y-3">
+              <div className="mx-auto w-16 h-16 rounded-full bg-purple-500/20 flex items-center justify-center">
+                <Code2 className="h-8 w-8 text-purple-500" />
+              </div>
+              <div className="space-y-1">
+                <h3 className="font-bold text-lg">Problem Solving</h3>
+                <Badge className="bg-purple-500 text-white">3 Stars</Badge>
+                <p className="text-xs text-muted-foreground">HackerRank</p>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-2 border-orange-500/20 bg-orange-500/5 hover:border-orange-500/40 transition-all duration-300">
+            <CardContent className="p-6 text-center space-y-3">
+              <div className="mx-auto w-16 h-16 rounded-full bg-orange-500/20 flex items-center justify-center">
+                <Code2 className="h-8 w-8 text-orange-500" />
+              </div>
+              <div className="space-y-1">
+                <h3 className="font-bold text-lg">Java (5★)</h3>
+                <Badge className="bg-orange-500 text-white">Gold Badge</Badge>
+                <p className="text-xs text-muted-foreground">HackerRank</p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
 

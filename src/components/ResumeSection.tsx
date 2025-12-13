@@ -239,15 +239,18 @@ export default function ResumeSection() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       {/* Header with Actions */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div>
-          <h2 className="text-2xl font-bold">Resume</h2>
-          <p className="text-muted-foreground">Download or view my complete professional background</p>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          <Button
+      <div className="text-center space-y-2">
+        <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight">Professional Resume</h2>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          Comprehensive overview of education, skills, certifications, and technical experience
+        </p>
+      </div>
+
+      {/* Quick Actions */}
+      <div className="flex flex-wrap justify-center gap-3">
+        <Button
             variant="outline"
             size="sm"
             onClick={handleCopyEmail}
@@ -282,7 +285,6 @@ export default function ResumeSection() {
             <Download className="h-4 w-4" />
             Download PDF
           </Button>
-        </div>
       </div>
 
       {/* Summary */}
