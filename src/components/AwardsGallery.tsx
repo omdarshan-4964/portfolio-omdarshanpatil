@@ -134,96 +134,136 @@ export default function AwardsGallery({ className = '' }: AwardsGalleryProps) {
   }, [selectedAward, goToPrevious, goToNext, closeLightbox])
 
   return (
-    <section className={`py-16 ${className}`}>
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12 space-y-2">
-          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight">Awards & Achievements</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Recognition for academic excellence, leadership roles, and technical innovation across competitions and organizational responsibilities.
+    <section className={`py-16 px-4 bg-gradient-to-b from-background to-secondary/20 ${className}`}>
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Trophy className="h-10 w-10 text-primary" />
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+              Awards & Achievements
+            </h2>
+          </div>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+            Recognition for <span className="font-semibold text-foreground">academic excellence</span>, <span className="font-semibold text-foreground">leadership roles</span>, and <span className="font-semibold text-foreground">technical innovation</span>
           </p>
         </div>
 
-        {/* Awards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {/* Awards Grid - Masonry Style */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {AWARDS.map((award, index) => {
             const IconComponent = CATEGORY_ICONS[award.category]
             return (
               <motion.div
                 key={award.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group cursor-pointer"
                 onClick={() => openLightbox(award)}
               >
-                <div className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]">
-                  <div className="aspect-[4/3] overflow-hidden bg-muted">
+                <div className="relative bg-card border-2 border-border rounded-xl overflow-hidden hover:shadow-2xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-2">
+                  {/* Image with Overlay */}
+                  <div className="relative aspect-[4/3] overflow-hidden">
                     <img 
                       src={award.imageUrl} 
                       alt={award.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       loading="lazy"
                     />
-                  </div>
-                  <div className="p-4">
-                    <div className="flex items-start justify-between gap-2 mb-2">
-                      <Badge className={`text-xs ${CATEGORY_COLORS[award.category]}`}>
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                    
+                    {/* Badge on Image */}
+                    <div className="absolute top-4 left-4">
+                      <Badge className={`text-xs font-semibold backdrop-blur-sm ${
+                        award.category === 'Leadership' 
+                          ? 'bg-green-500/90 text-white border-green-400' 
+                          : 'bg-yellow-500/90 text-white border-yellow-400'
+                      }`}>
                         <IconComponent className="h-3 w-3 mr-1" />
                         {award.category}
                       </Badge>
-                      <span className="text-xs text-muted-foreground">{award.date}</span>
                     </div>
-                    <h3 className="font-semibold mb-1 line-clamp-2 group-hover:text-primary transition-colors">
+
+                    {/* Year Badge */}
+                    <div className="absolute top-4 right-4">
+                      <Badge variant="secondary" className="text-xs font-semibold backdrop-blur-sm bg-background/90">
+                        {award.date}
+                      </Badge>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-5 space-y-3">
+                    <h3 className="font-bold text-lg leading-tight group-hover:text-primary transition-colors line-clamp-2">
                       {award.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
+                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
                       {award.description}
                     </p>
-                    <p className="text-xs text-muted-foreground font-medium">
-                      {award.organization}
-                    </p>
+                    <div className="flex items-center gap-2 pt-2 border-t border-border">
+                      <Award className="h-4 w-4 text-primary flex-shrink-0" />
+                      <p className="text-xs text-muted-foreground font-medium line-clamp-1">
+                        {award.organization}
+                      </p>
+                    </div>
                   </div>
+
+                  {/* Hover Effect Indicator */}
+                  <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/20 rounded-xl transition-all duration-300 pointer-events-none"></div>
                 </div>
               </motion.div>
             )
           })}
         </div>
 
+        {/* Footer Note */}
+        <div className="mt-12 text-center">
+          <p className="text-sm text-muted-foreground">
+            Click on any award to view full details and larger images
+          </p>
+        </div>
+
         {/* Lightbox Modal */}
         <Dialog open={!!selectedAward} onOpenChange={closeLightbox}>
           {selectedAward && (
-            <DialogContent className="max-w-4xl max-h-[90vh] p-0 overflow-hidden">
+            <DialogContent className="max-w-5xl max-h-[90vh] p-0 overflow-hidden bg-background">
               <div className="relative">
                 {/* Close Button */}
                 <Button
                   variant="secondary"
                   size="icon"
-                  className="absolute top-4 right-4 z-10 bg-black/20 hover:bg-black/40 text-white border-0"
+                  className="absolute top-4 right-4 z-20 bg-background/80 backdrop-blur-sm hover:bg-background border shadow-lg"
                   onClick={closeLightbox}
                 >
-                  <X className="h-4 w-4" />
+                  <X className="h-5 w-5" />
                 </Button>
 
                 {/* Navigation Buttons */}
-                <Button
-                  variant="secondary"
-                  size="icon"
-                  className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/20 hover:bg-black/40 text-white border-0"
-                  onClick={goToPrevious}
-                >
-                  <ChevronLeft className="h-4 w-4" />
-                </Button>
-                <Button
-                  variant="secondary"
-                  size="icon"  
-                  className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/20 hover:bg-black/40 text-white border-0"
-                  onClick={goToNext}
-                >
-                  <ChevronRight className="h-4 w-4" />
-                </Button>
+                {AWARDS.length > 1 && (
+                  <>
+                    <Button
+                      variant="secondary"
+                      size="icon"
+                      className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-background/80 backdrop-blur-sm hover:bg-background border shadow-lg"
+                      onClick={goToPrevious}
+                    >
+                      <ChevronLeft className="h-5 w-5" />
+                    </Button>
+                    <Button
+                      variant="secondary"
+                      size="icon"  
+                      className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-background/80 backdrop-blur-sm hover:bg-background border shadow-lg"
+                      onClick={goToNext}
+                    >
+                      <ChevronRight className="h-5 w-5" />
+                    </Button>
+                  </>
+                )}
 
-                {/* Image */}
-                <div className="aspect-video bg-black">
+                {/* Image Container */}
+                <div className="relative aspect-video bg-black/95">
                   <img 
                     src={selectedAward.imageUrl} 
                     alt={selectedAward.title}
@@ -232,37 +272,55 @@ export default function AwardsGallery({ className = '' }: AwardsGalleryProps) {
                 </div>
 
                 {/* Award Details */}
-                <div className="p-6 bg-card">
-                  <div className="flex items-start justify-between gap-4 mb-4">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        <Badge className={`${CATEGORY_COLORS[selectedAward.category]}`}>
-                          {React.createElement(CATEGORY_ICONS[selectedAward.category], { className: 'h-3 w-3 mr-1' })}
+                <div className="p-8 space-y-4">
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex-1 space-y-3">
+                      <div className="flex items-center gap-3">
+                        <Badge className={`font-semibold ${
+                          selectedAward.category === 'Leadership' 
+                            ? 'bg-green-500 text-white' 
+                            : 'bg-yellow-500 text-white'
+                        }`}>
+                          {React.createElement(CATEGORY_ICONS[selectedAward.category], { className: 'h-4 w-4 mr-1' })}
                           {selectedAward.category}
                         </Badge>
-                        <span className="text-sm text-muted-foreground">{selectedAward.date}</span>
+                        <Badge variant="outline" className="font-semibold">
+                          {selectedAward.date}
+                        </Badge>
                       </div>
-                      <h3 className="text-2xl font-display font-bold mb-2">{selectedAward.title}</h3>
-                      <p className="text-muted-foreground mb-3">{selectedAward.description}</p>
-                      <p className="text-sm font-medium text-primary">{selectedAward.organization}</p>
+                      <h3 className="text-3xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+                        {selectedAward.title}
+                      </h3>
+                      <p className="text-muted-foreground text-lg leading-relaxed">
+                        {selectedAward.description}
+                      </p>
+                      <div className="flex items-center gap-2 pt-2">
+                        <Award className="h-5 w-5 text-primary" />
+                        <p className="font-semibold text-foreground">{selectedAward.organization}</p>
+                      </div>
                     </div>
                   </div>
 
                   {/* Navigation Indicators */}
-                  <div className="flex justify-center gap-2 mt-4">
-                    {AWARDS.map((_, index) => (
-                      <button
-                        key={index}
-                        className={`w-2 h-2 rounded-full transition-colors ${
-                          index === currentIndex ? 'bg-primary' : 'bg-muted-foreground/30'
-                        }`}
-                        onClick={() => {
-                          setCurrentIndex(index)
-                          setSelectedAward(AWARDS[index])
-                        }}
-                      />
-                    ))}
-                  </div>
+                  {AWARDS.length > 1 && (
+                    <div className="flex justify-center gap-2 pt-4 border-t border-border">
+                      {AWARDS.map((_, index) => (
+                        <button
+                          key={index}
+                          className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                            index === currentIndex 
+                              ? 'bg-primary w-8' 
+                              : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
+                          }`}
+                          onClick={() => {
+                            setCurrentIndex(index)
+                            setSelectedAward(AWARDS[index])
+                          }}
+                          aria-label={`View award ${index + 1}`}
+                        />
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </DialogContent>

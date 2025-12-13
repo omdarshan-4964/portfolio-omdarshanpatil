@@ -9,6 +9,9 @@ import { toast } from "sonner"
 const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
+  { href: "#education", label: "Education" },
+  { href: "#certifications", label: "Certifications" },
   { href: "#awards", label: "Awards" },
   { href: "#contact", label: "Contact" },
 ]
@@ -130,9 +133,9 @@ export default function Navbar() {
               </div>
 
               {/* Resume Download */}
-              <a href="/resume.pdf" download>
+              <a href="/resume.pdf" download="Omdarshan_Shindepatil_Resume.pdf">
                 <Button 
-                  variant="outline" 
+                  variant="default" 
                   size="sm" 
                   className="text-sm font-medium"
                 >

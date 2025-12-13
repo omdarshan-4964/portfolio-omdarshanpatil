@@ -61,10 +61,10 @@ export default function ContactForm({ className }: ContactFormProps) {
       <Card className="bg-card">
         <CardHeader className="text-center">
           <CardTitle className="text-3xl md:text-4xl font-display bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">
-            Let&apos;s Connect
+            Open to Full-Time Roles (July 2026)
           </CardTitle>
           <CardDescription className="text-base mt-2">
-            Available for full-time opportunities and interesting projects
+            Seeking full-time software engineering opportunities starting July 2026
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-8">

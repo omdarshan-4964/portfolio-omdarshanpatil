@@ -21,11 +21,13 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           {/* Left: Logo/Name + Tagline */}
           <div className="flex flex-col space-y-1">
-            <div className="font-display font-semibold text-foreground">
-              Portfolio
+            <div className="font-display font-semibold text-xl">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
+                Omdarshan Shindepatil
+              </span>
             </div>
             <p className="text-sm text-muted-foreground">
-              The Digital Resume for Your Career Opportunities
+              Full-Stack Software Engineer • Building Scalable Solutions
             </p>
           </div>
 
