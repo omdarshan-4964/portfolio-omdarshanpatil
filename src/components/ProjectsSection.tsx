@@ -37,37 +37,6 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
-    "id": "cerebra",
-    "title": "Cerebra - AI-Powered Learning Map Generator",
-    "description": "AI-powered learning roadmap generator creating personalized, interactive node-based learning maps using Google Gemini. Built with Next.js 14 and React Flow.",
-    "longDescription": "Cerebra is an intelligent learning roadmap platform that leverages Google's Gemini AI to generate personalized, interactive node-based learning maps for any topic. The system features intelligent auto-layout algorithms, difficulty-based filtering, and a modern glassmorphic UI. Users can create custom learning paths, filter by difficulty levels, export their progress, and access curated templates for popular topics like Web Development, Machine Learning, and Python.",
-    "techStack": ["Next.js 14", "React 18", "TypeScript", "Google Gemini AI", "React Flow", "Tailwind CSS", "Vercel"],
-    "category": "Machine Learning",
-    "duration": "October 2025 - December 2025",
-    "role": "Full Stack Developer",
-    "thumbnailUrl": "/Projects/Cerebra/Thumbnail.png",
-    "screenshots": [
-      "/Projects/Cerebra/Thumbnail.png",
-      "/Projects/Cerebra/Start.png",
-      "/Projects/Cerebra/Generated maps.png",
-      "/Projects/Cerebra/Features.png"
-    ],
-    "githubUrl": "https://github.com/omdarshan-4964/Cerebra",
-    "liveUrl": "https://cerebra-ten.vercel.app/",
-    "features": [
-      "🧩 AI-powered learning path generation using Google Gemini API with intelligent content curation",
-      "🗺️ Interactive node-based visualization with React Flow and drag-and-drop functionality",
-      "🎚️ Advanced difficulty filtering system (beginner/intermediate/advanced) for personalized learning",
-      "🧭 Intelligent auto-layout algorithm using Dagre for optimal map organization",
-      "💾 Export functionality supporting JSON format for progress tracking and sharing",
-      "🎨 Modern glassmorphic UI with gradient aesthetics and smooth animations",
-      "⌨️ Keyboard shortcuts support for enhanced productivity",
-      "🔍 Real-time search with match highlighting across learning nodes",
-      "📚 Built-in curated templates (Web Dev, ML, Python, Data Science, Cloud Computing)",
-      "⚡ Fast performance with Next.js 14 and TypeScript achieving 98+ Lighthouse score"
-    ]
-  },
-  {
     "id": "codestream",
     "title": "CodeStream - Real-Time Collaborative Code Editor",
     "description": "Production-ready collaborative coding platform with <50ms latency, supporting 50+ concurrent users per room. Built with Next.js and WebSockets.",
@@ -156,6 +125,37 @@ const PROJECTS: Project[] = [
       '⚡ Achieved <3s transaction confirmation time using optimized blockchain calls',
       '👥 Serving 300+ registered users with JWT-based authentication',
       '🚀 Deployed microservices architecture with 98% uptime'
+    ]
+  },
+  {
+    "id": "cerebra",
+    "title": "Cerebra - AI-Powered Learning Map Generator",
+    "description": "AI-powered learning roadmap generator creating personalized, interactive node-based learning maps using Google Gemini. Built with Next.js 14 and React Flow.",
+    "longDescription": "Cerebra is an intelligent learning roadmap platform that leverages Google's Gemini AI to generate personalized, interactive node-based learning maps for any topic. The system features intelligent auto-layout algorithms, difficulty-based filtering, and a modern glassmorphic UI. Users can create custom learning paths, filter by difficulty levels, export their progress, and access curated templates for popular topics like Web Development, Machine Learning, and Python.",
+    "techStack": ["Next.js 14", "React 18", "TypeScript", "Google Gemini AI", "React Flow", "Tailwind CSS", "Vercel"],
+    "category": "Machine Learning",
+    "duration": "October 2025 - December 2025",
+    "role": "Full Stack Developer",
+    "thumbnailUrl": "/Projects/Cerebra/Thumbnail.png",
+    "screenshots": [
+      "/Projects/Cerebra/Thumbnail.png",
+      "/Projects/Cerebra/Start.png",
+      "/Projects/Cerebra/Generated maps.png",
+      "/Projects/Cerebra/Features.png"
+    ],
+    "githubUrl": "https://github.com/omdarshan-4964/Cerebra",
+    "liveUrl": "https://cerebra-ten.vercel.app/",
+    "features": [
+      "🧩 AI-powered learning path generation using Google Gemini API with intelligent content curation",
+      "🗺️ Interactive node-based visualization with React Flow and drag-and-drop functionality",
+      "🎚️ Advanced difficulty filtering system (beginner/intermediate/advanced) for personalized learning",
+      "🧭 Intelligent auto-layout algorithm using Dagre for optimal map organization",
+      "💾 Export functionality supporting JSON format for progress tracking and sharing",
+      "🎨 Modern glassmorphic UI with gradient aesthetics and smooth animations",
+      "⌨️ Keyboard shortcuts support for enhanced productivity",
+      "🔍 Real-time search with match highlighting across learning nodes",
+      "📚 Built-in curated templates (Web Dev, ML, Python, Data Science, Cloud Computing)",
+      "⚡ Fast performance with Next.js 14 and TypeScript achieving 98+ Lighthouse score"
     ]
   },
   {
@@ -264,10 +264,15 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
   return (
     <section className={`py-16 ${className}`}>
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12 space-y-2">
-          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight">Featured Projects</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my technical expertise across full-stack development, blockchain solutions, and modern web applications.
+        <div className="text-center mb-12 space-y-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight">
+            Featured <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">Projects</span>
+          </h2>
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Production-grade applications showcasing expertise in <span className="text-foreground font-semibold">Full-Stack Development</span>, 
+            <span className="text-foreground font-semibold"> AI Integration</span>, and 
+            <span className="text-foreground font-semibold"> Real-Time Systems</span>. 
+            Serving <span className="text-primary font-bold">1000+ users</span> across 5 deployed applications.
           </p>
         </div>
 
@@ -363,9 +368,22 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
 
                     {/* Action Buttons */}
                     <div className="flex gap-2 pt-2">
+                      {project.liveUrl && (
+                        <Button 
+                          size="sm" 
+                          asChild
+                          className="flex-1"
+                        >
+                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="h-4 w-4 mr-1" />
+                            Try Demo
+                          </a>
+                        </Button>
+                      )}
                       <Button 
                         size="sm" 
-                        className="flex-1"
+                        variant="outline"
+                        className={project.liveUrl ? "flex-1" : "flex-1"}
                         onClick={() => openProjectModal(project)}
                       >
                         View Details
@@ -373,25 +391,12 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
                       <Button 
                         size="sm" 
                         variant="outline"
-                        onClick={() => handleCopyUrl(project.githubUrl, project.title)}
                         className="px-3"
                       >
                         <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                           <Github className="h-4 w-4" />
                         </a>
                       </Button>
-                      {project.liveUrl && (
-                        <Button 
-                          size="sm" 
-                          variant="outline"
-                          asChild
-                          className="px-3"
-                        >
-                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="h-4 w-4" />
-                          </a>
-                        </Button>
-                      )}
                     </div>
                   </CardContent>
                 </Card>
@@ -511,23 +516,23 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
 
               {/* Action Buttons */}
               <div className="flex gap-3 pt-4 border-t">
-                <Button asChild className="flex-1">
-                  <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer">
-                    <Github className="h-4 w-4 mr-2" />
-                    View on GitHub
-                  </a>
-                </Button>
                 {selectedProject.liveUrl && (
-                  <Button variant="outline" asChild className="flex-1">
+                  <Button asChild className="flex-1">
                     <a href={selectedProject.liveUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-4 w-4 mr-2" />
-                      Live Demo
+                      Try Live Demo
                     </a>
                   </Button>
                 )}
+                <Button variant="outline" asChild className="flex-1">
+                  <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <Github className="h-4 w-4 mr-2" />
+                    View Code
+                  </a>
+                </Button>
                 <Button 
                   variant="outline"
-                  onClick={() => handleCopyUrl(selectedProject.githubUrl, selectedProject.title)}
+                  onClick={() => handleCopyUrl(selectedProject.liveUrl || selectedProject.githubUrl, selectedProject.title)}
                   className="px-4"
                 >
                   <Copy className="h-4 w-4" />

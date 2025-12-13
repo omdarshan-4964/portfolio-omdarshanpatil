@@ -1,8 +1,11 @@
+"use client"
+
 import Image from "next/image";
 import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
-import TechnicalHighlights from "@/components/TechnicalHighlights"
-import ResumeSection from "@/components/ResumeSection"
+import TechnicalSkillsSection from "@/components/TechnicalSkillsSection"
+import CertificationsSection from "@/components/CertificationsSection"
+import EducationSection from "@/components/EducationSection"
 import ProjectsSection from "@/components/ProjectsSection"
 import AwardsGallery from "@/components/AwardsGallery"
 import ContactForm from "@/components/ContactForm"
@@ -20,20 +23,25 @@ export default function Home() {
         </section>
 
         {/* Main Content Container */}
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-24 py-16">
-          {/* Technical Highlights Section */}
-          <section id="highlights">
-            <TechnicalHighlights />
-          </section>
-
-          {/* Projects Section */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-8 py-8">
+          {/* Projects Section - Show work first to recruiters */}
           <section id="projects">
             <ProjectsSection />
           </section>
 
-          {/* Resume Section */}
-          <section id="resume">
-            <ResumeSection />
+          {/* Technical Skills Section */}
+          <section id="skills">
+            <TechnicalSkillsSection />
+          </section>
+
+          {/* Education Section */}
+          <section id="education">
+            <EducationSection />
+          </section>
+
+          {/* Certifications Section */}
+          <section id="certifications">
+            <CertificationsSection />
           </section>
 
           {/* Awards Gallery */}
