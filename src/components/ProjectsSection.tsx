@@ -78,11 +78,14 @@ const PROJECTS: Project[] = [
     "thumbnailUrl": "/Projects/SecureAuthGateway/Thumbnail.png",
     "screenshots": [
       "/Projects/SecureAuthGateway/Thumbnail.png",
-      "/Projects/SecureAuthGateway/image2.png",
-      "/Projects/SecureAuthGateway/image3.png",
-      "/Projects/SecureAuthGateway/image4.png",
-      "/Projects/SecureAuthGateway/image5.png",
-      "/Projects/SecureAuthGateway/image6.png",
+      "/Projects/SecureAuthGateway/login.png",
+      "/Projects/SecureAuthGateway/user_dash.png",
+      "/Projects/SecureAuthGateway/user_dashboard.png",
+      "/Projects/SecureAuthGateway/merchant_dashboard.png",
+      "/Projects/SecureAuthGateway/admin_dashboard.png",
+      "/Projects/SecureAuthGateway/transaction.png",
+      "/Projects/SecureAuthGateway/user_management.png"
+
     ],
     "githubUrl": "https://github.com/omdarshan-4964/SecureAuthGateway",
     "liveUrl": "https://secureauth-gateway.vercel.app/",
