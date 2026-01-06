@@ -67,6 +67,38 @@ const PROJECTS: Project[] = [
     ]
   },
   {
+    "id": "secureauth-gateway",
+    "title": "SecureAuth Gateway - Enterprise Authentication System",
+    "description": "Production-ready authentication & authorization infrastructure with JWT, RBAC, and real-time transaction processing. Supports 3-tier role management with 99.9% uptime.",
+    "longDescription": "SecureAuth Gateway is a full-stack enterprise authentication system built to demonstrate payment-grade security patterns including JWT-based authentication, role-based access control (RBAC), and transaction management. The platform implements a complete auth lifecycle with access/refresh token rotation, admin user management capabilities, and a Neo-Fintech UI with glass-morphism effects. The system is fully containerized with Docker and features comprehensive API documentation, automated health checks, and secure session management.",
+    "techStack": ["Next.js", "TypeScript", "Express.js", "MongoDB", "JWT", "Docker", "React Query", "Tailwind CSS"],
+    "category": "TypeScript-Next.js",
+    "duration": "December 2025 - January 2026",
+    "role": "Full Stack Developer",
+    "thumbnailUrl": "/Projects/SecureAuthGateway/Thumbnail.png",
+    "screenshots": [
+      "/Projects/SecureAuthGateway/Thumbnail.png",
+      "/Projects/SecureAuthGateway/image2.png",
+      "/Projects/SecureAuthGateway/image3.png",
+      "/Projects/SecureAuthGateway/image4.png",
+      "/Projects/SecureAuthGateway/image5.png",
+      "/Projects/SecureAuthGateway/image6.png",
+    ],
+    "githubUrl": "https://github.com/omdarshan-4964/SecureAuthGateway",
+    "liveUrl": "https://secureauth-gateway.vercel.app/",
+    "features": [
+      "🔐 Implemented JWT authentication with dual-token system (15min access + 7d refresh tokens)",
+      "👥 3-tier RBAC system (USER, MERCHANT, ADMIN) with granular permission management",
+      "💳 Real-time transaction processing system with status tracking and payment simulation",
+      "🛡️ Enterprise security: bcrypt password hashing, CORS, rate limiting, MongoDB sanitization",
+      "👤 Admin dashboard with user management (ban/unban), role assignment, and activity monitoring",
+      "🐳 Full Docker containerization with multi-stage builds and health check endpoints",
+      "🎨 Modern Neo-Fintech UI with glass-morphism design, responsive layout, and dark theme",
+      "📊 Comprehensive API documentation with 15+ endpoints and standardized response format",
+      "🔄 Auto token refresh mechanism with httpOnly cookies for enhanced security"
+    ]
+  },
+  {
     id: 'evento',
     title: 'Evento - College Event Management System',
     description: 'Enterprise-grade MERN application managing 500+ events, 2000+ bookings with 95% conflict-free scheduling. Serving 1000+ active users.',
