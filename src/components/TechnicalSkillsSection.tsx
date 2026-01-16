@@ -2,73 +2,73 @@
 
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Code, Shield, Palette, Server, Database, Cloud, Cpu, Wrench } from "lucide-react"
+import { Code, Shield, Palette, Server, Database, Cloud, Cpu, Wrench, Sparkles, GitBranch } from "lucide-react"
 
 const skillsData = [
   {
-    category: "Programming Languages",
+    category: "Frontend & UI",
+    icon: Palette,
+    color: "from-indigo-500 to-purple-500",
+    skills: ["React 19", "Next.js 16", "Tailwind CSS", "Framer Motion", "shadcn/ui", "Responsive Design"]
+  },
+  {
+    category: "Backend Architecture",
+    icon: Server,
+    color: "from-green-500 to-emerald-500",
+    skills: ["Node.js", "Express.js", "WebSockets", "Microservices", "RESTful APIs"]
+  },
+  {
+    category: "Agentic AI & ML",
+    icon: Sparkles,
+    color: "from-purple-500 to-pink-500",
+    skills: ["Gemini 1.5 Flash", "RAG Pipelines", "React Flow", "OpenAI API", "Multi-Agent Systems"]
+  },
+  {
+    category: "Languages",
     icon: Code,
     color: "from-blue-500 to-cyan-500",
-    skills: ["Java", "JavaScript (ES6+)", "TypeScript", "Python", "C++", "C", "HTML5", "CSS3"]
+    skills: ["TypeScript", "JavaScript (ES6+)", "Java", "C++", "Python"]
+  },
+  {
+    category: "Database & Cloud",
+    icon: Database,
+    color: "from-orange-500 to-amber-500",
+    skills: ["MongoDB", "PostgreSQL", "AWS", "Docker", "Prisma ORM"]
   },
   {
     category: "Security & Identity",
     icon: Shield,
     color: "from-red-500 to-pink-500",
-    skills: ["JWT Authentication", "OAuth 2.0", "OpenID Connect (OIDC)", "RESTful API Security", "Role-based Access Control (RBAC)"]
+    skills: ["JWT Authentication", "OAuth 2.0", "RBAC", "OIDC", "API Security"]
   },
   {
-    category: "Frontend",
-    icon: Palette,
-    color: "from-purple-500 to-indigo-500",
-    skills: ["React.js", "Next.js", "Tailwind CSS", "Responsive Design"]
-  },
-  {
-    category: "Backend",
-    icon: Server,
-    color: "from-green-500 to-emerald-500",
-    skills: ["Node.js", "Express.js", "RESTful APIs", "Secure Business Logic", "Authentication Middleware"]
-  },
-  {
-    category: "Databases",
-    icon: Database,
-    color: "from-orange-500 to-amber-500",
-    skills: ["MongoDB", "MySQL", "Data Integrity Management", "Query Optimization"]
-  },
-  {
-    category: "Cloud & DevOps",
-    icon: Cloud,
-    color: "from-sky-500 to-blue-500",
-    skills: ["AWS", "Docker", "Kubernetes (Familiar)", "Git", "CI/CD Concepts"]
+    category: "DevOps & Tools",
+    icon: GitBranch,
+    color: "from-teal-500 to-cyan-500",
+    skills: ["Git", "GitHub Actions", "Vercel", "Postman", "CI/CD Pipelines"]
   },
   {
     category: "CS Fundamentals",
     icon: Cpu,
     color: "from-violet-500 to-purple-500",
-    skills: ["Data Structures", "Algorithms", "Object-Oriented Programming", "System Design"]
-  },
-  {
-    category: "Tools & Platforms",
-    icon: Wrench,
-    color: "from-teal-500 to-cyan-500",
-    skills: ["VS Code", "Postman", "GitHub", "npm/yarn"]
+    skills: ["Data Structures", "Algorithms", "System Design", "OOP", "Distributed Systems"]
   }
 ]
 
 export default function TechnicalSkillsSection() {
   return (
-    <section id="skills" className="py-16 px-4 bg-gradient-to-b from-background to-secondary/20">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+    <section id="skills" className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-background to-secondary/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
             Technical Skills
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Comprehensive technical expertise across <span className="font-semibold text-foreground">full-stack development</span>, <span className="font-semibold text-foreground">security</span>, and <span className="font-semibold text-foreground">cloud technologies</span>
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {skillsData.map((skillGroup, index) => {
             const Icon = skillGroup.icon
             return (

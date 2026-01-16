@@ -37,6 +37,36 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
+    "id": "ai-workflow-builder",
+    "title": "AI Workflow Builder (Weavy.ai Clone)",
+    "description": "Architected a concurrent AI execution engine using a 'Fan-Out' architecture to trigger multiple AI agents from a single prompt. Production-grade agentic AI system with visual DAG builder.",
+    "longDescription": "AI Workflow Builder is an enterprise-grade agentic AI platform that revolutionizes multi-agent orchestration. Built with a sophisticated Fan-Out architecture, it enables parallel execution of multiple specialized AI agents from a single prompt, dramatically reducing latency and increasing throughput. The system features a visual DAG (Directed Acyclic Graph) builder using React Flow for intuitive workflow design, enterprise state management with Zustand, and MongoDB for persistent workflow storage. This project demonstrates deep understanding of distributed systems, concurrent processing, and modern AI agent architecture.",
+    "techStack": ["Next.js 16", "TypeScript", "Gemini 1.5 Flash", "React Flow", "Zustand", "MongoDB", "Vercel"],
+    "category": "Machine Learning",
+    "duration": "January 2026 - Present",
+    "role": "Full Stack & AI Engineer",
+    "thumbnailUrl": "/Projects/AIWorkflow/Thumbnail.png",
+    "screenshots": [
+      "/Projects/AIWorkflow/Thumbnail.png",
+      "/Projects/AIWorkflow/editor-parallel.png",
+      "/Projects/AIWorkflow/node-canvas.png"
+    ],
+    "githubUrl": "https://github.com/omdarshan-4964/ai-workflow-builder",
+    "liveUrl": "https://ai-workflow-builder-iota.vercel.app/",
+    "features": [
+      "🚀 Fan-Out Architecture: Concurrent execution of multiple AI agents with intelligent task distribution",
+      "🧠 Agentic AI System: Specialized agents for different tasks (Research, Code, Analysis, Creative)",
+      "📊 Visual DAG Builder: Drag-and-drop workflow designer using React Flow with real-time validation",
+      "⚡ Parallel Execution: Trigger 5+ agents simultaneously with <2s response time per agent",
+      "🎯 Enterprise State Management: Zustand-powered state with persistent workflow storage in MongoDB",
+      "🔄 Real-time Updates: WebSocket integration for live agent status and execution progress",
+      "💾 Workflow Persistence: Save, load, and share complex multi-agent workflows",
+      "🎨 Modern UI: Built with shadcn/ui and Tailwind CSS for professional user experience",
+      "🔐 Secure API Integration: Rate-limited Gemini 1.5 Flash API calls with error handling",
+      "📈 Performance Optimized: Next.js 16 App Router with server components and streaming"
+    ]
+  },
+  {
     "id": "codestream",
     "title": "CodeStream - Real-Time Collaborative Code Editor",
     "description": "Production-ready collaborative coding platform with <50ms latency, supporting 50+ concurrent users per room. Built with Next.js and WebSockets.",
@@ -102,6 +132,37 @@ const PROJECTS: Project[] = [
     ]
   },
   {
+    "id": "cerebra",
+    "title": "Cerebra - AI-Powered Learning Map Generator",
+    "description": "AI-powered learning roadmap generator creating personalized, interactive node-based learning maps using Google Gemini. Built with Next.js 14 and React Flow.",
+    "longDescription": "Cerebra is an intelligent learning roadmap platform that leverages Google's Gemini AI to generate personalized, interactive node-based learning maps for any topic. The system features intelligent auto-layout algorithms, difficulty-based filtering, and a modern glassmorphic UI. Users can create custom learning paths, filter by difficulty levels, export their progress, and access curated templates for popular topics like Web Development, Machine Learning, and Python.",
+    "techStack": ["Next.js 14", "React 18", "TypeScript", "Google Gemini AI", "React Flow", "Tailwind CSS", "Vercel"],
+    "category": "Machine Learning",
+    "duration": "October 2025 - December 2025",
+    "role": "Full Stack Developer",
+    "thumbnailUrl": "/Projects/Cerebra/Thumbnail.png",
+    "screenshots": [
+      "/Projects/Cerebra/Thumbnail.png",
+      "/Projects/Cerebra/Start.png",
+      "/Projects/Cerebra/Generated maps.png",
+      "/Projects/Cerebra/Features.png"
+    ],
+    "githubUrl": "https://github.com/omdarshan-4964/Cerebra",
+    "liveUrl": "https://cerebra-ten.vercel.app/",
+    "features": [
+      "🧩 AI-powered learning path generation using Google Gemini API with intelligent content curation",
+      "🗺️ Interactive node-based visualization with React Flow and drag-and-drop functionality",
+      "🎚️ Advanced difficulty filtering system (beginner/intermediate/advanced) for personalized learning",
+      "🧭 Intelligent auto-layout algorithm using Dagre for optimal map organization",
+      "💾 Export functionality supporting JSON format for progress tracking and sharing",
+      "🎨 Modern glassmorphic UI with gradient aesthetics and smooth animations",
+      "⌨️ Keyboard shortcuts support for enhanced productivity",
+      "🔍 Real-time search with match highlighting across learning nodes",
+      "📚 Built-in curated templates (Web Dev, ML, Python, Data Science, Cloud Computing)",
+      "⚡ Fast performance with Next.js 14 and TypeScript achieving 98+ Lighthouse score"
+    ]
+  },
+  {
     id: 'evento',
     title: 'Evento - College Event Management System',
     description: 'Enterprise-grade MERN application managing 500+ events, 2000+ bookings with 95% conflict-free scheduling. Serving 1000+ active users.',
@@ -160,63 +221,6 @@ const PROJECTS: Project[] = [
       '⚡ Achieved <3s transaction confirmation time using optimized blockchain calls',
       '👥 Serving 300+ registered users with JWT-based authentication',
       '🚀 Deployed microservices architecture with 98% uptime'
-    ]
-  },
-  {
-    "id": "cerebra",
-    "title": "Cerebra - AI-Powered Learning Map Generator",
-    "description": "AI-powered learning roadmap generator creating personalized, interactive node-based learning maps using Google Gemini. Built with Next.js 14 and React Flow.",
-    "longDescription": "Cerebra is an intelligent learning roadmap platform that leverages Google's Gemini AI to generate personalized, interactive node-based learning maps for any topic. The system features intelligent auto-layout algorithms, difficulty-based filtering, and a modern glassmorphic UI. Users can create custom learning paths, filter by difficulty levels, export their progress, and access curated templates for popular topics like Web Development, Machine Learning, and Python.",
-    "techStack": ["Next.js 14", "React 18", "TypeScript", "Google Gemini AI", "React Flow", "Tailwind CSS", "Vercel"],
-    "category": "Machine Learning",
-    "duration": "October 2025 - December 2025",
-    "role": "Full Stack Developer",
-    "thumbnailUrl": "/Projects/Cerebra/Thumbnail.png",
-    "screenshots": [
-      "/Projects/Cerebra/Thumbnail.png",
-      "/Projects/Cerebra/Start.png",
-      "/Projects/Cerebra/Generated maps.png",
-      "/Projects/Cerebra/Features.png"
-    ],
-    "githubUrl": "https://github.com/omdarshan-4964/Cerebra",
-    "liveUrl": "https://cerebra-ten.vercel.app/",
-    "features": [
-      "🧩 AI-powered learning path generation using Google Gemini API with intelligent content curation",
-      "🗺️ Interactive node-based visualization with React Flow and drag-and-drop functionality",
-      "🎚️ Advanced difficulty filtering system (beginner/intermediate/advanced) for personalized learning",
-      "🧭 Intelligent auto-layout algorithm using Dagre for optimal map organization",
-      "💾 Export functionality supporting JSON format for progress tracking and sharing",
-      "🎨 Modern glassmorphic UI with gradient aesthetics and smooth animations",
-      "⌨️ Keyboard shortcuts support for enhanced productivity",
-      "🔍 Real-time search with match highlighting across learning nodes",
-      "📚 Built-in curated templates (Web Dev, ML, Python, Data Science, Cloud Computing)",
-      "⚡ Fast performance with Next.js 14 and TypeScript achieving 98+ Lighthouse score"
-    ]
-  },
-  {
-    id: 'lifelink',
-    title: 'LifeLink: Blood Donation Management System',
-    description: 'Life-saving MERN platform connecting 200+ donors with 50+ recipients. Real-time matching with <5min response time for emergency requests.',
-    longDescription: 'LifeLink addresses critical blood shortage issues by creating an efficient network connecting blood donors with recipients. The platform has successfully facilitated 150+ blood donations, connected 200+ verified donors with 50+ recipients, and maintains a 92% successful match rate. Features real-time availability tracking, emergency notifications with <5min response time, and comprehensive donor management to save lives through technology.',
-    techStack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Tailwind CSS'],
-    category: 'Full Stack',
-    duration: 'November 2024',
-    role: 'Full Stack Developer',
-    thumbnailUrl:  "/Projects/LifeLink/Thumbnail.png",
-    screenshots: [
-      "/Projects/LifeLink/Thumbnail.png",
-      "/Projects/LifeLink/login.png"
-    ],
-    githubUrl: 'https://github.com/omdarshan-4964/Blood-donation-management-system-SEM_V_PBL_Project',
-    liveUrl: 'https://life-link-9ajo.onrender.com/',
-    features: [
-      '❤️ Facilitated 150+ successful blood donations, connecting 200+ donors with 50+ recipients',
-      '⚡ Emergency notification system with <5min response time for urgent requests',
-      '🎯 Achieved 92% successful match rate using intelligent blood type matching algorithm',
-      '📊 Real-time dashboard tracking 300+ blood units with availability status',
-      '🔒 Secure JWT authentication serving 250+ registered users with RBAC',
-      '📱 Built responsive UI achieving 95+ Lighthouse score for mobile experience',
-      '🚀 Deployed on Render with 98% uptime, handling 1000+ monthly visits'
     ]
   }
 ]
@@ -297,23 +301,23 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
   }, [selectedProject, handlePreviousImage, handleNextImage, closeProjectModal])
 
   return (
-    <section className={`py-16 ${className}`}>
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12 space-y-4">
-          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight">
+    <section className={`py-12 md:py-16 lg:py-20 ${className}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10 md:mb-12 space-y-3 md:space-y-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">
             Featured <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">Projects</span>
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Production-grade applications showcasing expertise in <span className="text-foreground font-semibold">Full-Stack Development</span>, 
-            <span className="text-foreground font-semibold"> AI Integration</span>, and 
-            <span className="text-foreground font-semibold"> Real-Time Systems</span>. 
-            Serving <span className="text-primary font-bold">1000+ users</span> across 5 deployed applications.
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
+            Production-grade applications showcasing expertise in <span className="text-foreground font-semibold">Agentic AI Systems</span>, 
+            <span className="text-foreground font-semibold"> Next.js Architecture</span>, and 
+            <span className="text-foreground font-semibold"> Real-Time Distributed Systems</span>. 
+            Serving <span className="text-primary font-bold">1000+ users</span> across 6 deployed applications.
           </p>
         </div>
 
         {/* Filter Bar */}
-        <div className="flex flex-wrap gap-3 justify-center mb-12">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground mr-4">
+        <div className="flex flex-wrap gap-2 md:gap-3 justify-center mb-8 md:mb-12 px-4">
+          <div className="flex items-center gap-2 text-sm text-muted-foreground mr-2 md:mr-4">
             <Filter className="h-4 w-4" />
             <span>Filter by:</span>
           </div>
@@ -323,7 +327,7 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
               variant={selectedCategory === category ? 'default' : 'outline'}
               size="sm"
               onClick={() => setSelectedCategory(category)}
-              className="transition-all duration-200"
+              className="transition-all duration-200 text-xs md:text-sm"
             >
               {category}
             </Button>
@@ -331,7 +335,7 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <AnimatePresence mode="wait">
             {filteredProjects.map((project, index) => (
               <motion.div

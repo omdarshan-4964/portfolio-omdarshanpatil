@@ -36,16 +36,16 @@ export default function Hero({ className = "" }: HeroProps) {
 
   return (
     <TooltipProvider>
-      <section className={`relative py-16 lg:py-24 overflow-hidden ${className}`}>
+      <section className={`relative py-12 md:py-16 lg:py-24 overflow-hidden ${className}`}>
         {/* Animated Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/30 to-background">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-purple-500/20 via-transparent to-transparent"></div>
         </div>
 
-        <div className="container relative mx-auto px-4 max-w-7xl">
+        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           {/* Main Content Grid */}
-          <div className="grid grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             
             {/* Left Column - Profile Card */}
             <div className="flex justify-center lg:justify-start">
@@ -82,7 +82,7 @@ export default function Hero({ className = "" }: HeroProps) {
                   {/* Name & Role */}
                   <div className="space-y-2 text-center">
                     <h2 className="font-display font-bold text-2xl bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
-                      Full Stack Developer
+                      Next.js & AI Engineer
                     </h2>
                     <p className="text-muted-foreground text-sm font-medium">
                       Computer Science & Business Systems
@@ -95,7 +95,7 @@ export default function Hero({ className = "" }: HeroProps) {
                       <div className="flex justify-center mb-1">
                         <Code2 className="h-5 w-5 text-primary" />
                       </div>
-                      <div className="text-2xl font-display font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">5</div>
+                      <div className="text-2xl font-display font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">6</div>
                       <div className="text-[10px] text-muted-foreground uppercase tracking-wider mt-0.5 font-semibold">
                         Production Apps
                       </div>
@@ -103,11 +103,11 @@ export default function Hero({ className = "" }: HeroProps) {
                     
                     <div className="group/stat text-center p-3 rounded-lg bg-gradient-to-br from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 border border-purple-500/20">
                       <div className="flex justify-center mb-1">
-                        <Users className="h-5 w-5 text-purple-600" />
+                        <Sparkles className="h-5 w-5 text-purple-600" />
                       </div>
-                      <div className="text-2xl font-display font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">1K+</div>
+                      <div className="text-2xl font-display font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">AI</div>
                       <div className="text-[10px] text-muted-foreground uppercase tracking-wider mt-0.5 font-semibold">
-                        Users Served
+                        Agentic Specialist
                       </div>
                     </div>
                     
@@ -115,7 +115,7 @@ export default function Hero({ className = "" }: HeroProps) {
                       <div className="flex justify-center mb-1">
                         <Award className="h-5 w-5 text-green-600" />
                       </div>
-                      <div className="text-2xl font-display font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">95%</div>
+                      <div className="text-2xl font-display font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">99.9%</div>
                       <div className="text-[10px] text-muted-foreground uppercase tracking-wider mt-0.5 font-semibold">
                         Uptime
                       </div>
@@ -149,7 +149,7 @@ export default function Hero({ className = "" }: HeroProps) {
                       <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-transparent"></div>
                     </div>
                     <div className="flex flex-wrap gap-2 justify-center">
-                      {["React.js", "Next.js", "TypeScript", "Node.js", "MongoDB", "WebSockets", "Docker", "AWS"].map((tech, index) => (
+                      {["Next.js 16", "TypeScript", "Agentic AI", "React Flow", "Gemini API", "WebSockets", "Docker", "AWS"].map((tech, index) => (
                         <Badge
                           key={tech}
                           variant="secondary"
@@ -190,7 +190,7 @@ export default function Hero({ className = "" }: HeroProps) {
                   
                   <div className="flex flex-wrap items-center gap-3">
                     <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground/90">
-                      Full-Stack Software Engineer
+                      Next.js & AI Engineer
                     </h2>
                     <Badge className="text-sm px-3 py-1 bg-gradient-to-r from-primary to-purple-600 border-0 shadow-lg">
                       Class of 2026
@@ -202,7 +202,7 @@ export default function Hero({ className = "" }: HeroProps) {
                 <div className="relative p-6 rounded-xl bg-gradient-to-br from-secondary/50 to-secondary/30 border border-border/50 backdrop-blur-sm">
                   <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary to-purple-600 rounded-l-xl"></div>
                   <p className="text-base lg:text-lg text-muted-foreground leading-relaxed">
-                    Full-Stack Software Engineer with proven expertise in building production-ready applications. Specialized in secure, scalable MERN stack systems, real-time distributed computing, and API security with strong foundation in DSA, system design, and modern cloud technologies (AWS, Docker).
+                    Engineering Agentic AI Systems & Scalable Cloud Architecture. Specialized in building high-performance engines using Next.js 16, Distributed Systems, and Fan-Out Architectures. Proven expertise in real-time collaborative platforms and enterprise-grade authentication systems.
                   </p>
                 </div>
               </div>
