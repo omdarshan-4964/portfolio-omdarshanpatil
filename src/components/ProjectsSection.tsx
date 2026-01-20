@@ -303,7 +303,12 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
   return (
     <section className={`py-8 sm:py-12 md:py-16 lg:py-20 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 md:mb-10 lg:mb-12 space-y-2 md:space-y-3">
+        <motion.div 
+          className="text-center mb-8 md:mb-10 lg:mb-12 space-y-2 md:space-y-3"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight px-2">
             Featured <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">Projects</span>
           </h2>
@@ -313,10 +318,15 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
             <span className="text-foreground font-semibold"> Real-Time Distributed Systems</span>. 
             Serving <span className="text-primary font-bold">1000+ users</span> across 6 deployed applications.
           </p>
-        </div>
+        </motion.div>
 
         {/* Filter Bar */}
-        <div className="flex flex-wrap gap-2 justify-center mb-6 sm:mb-8 md:mb-12 px-2">
+        <motion.div 
+          className="flex flex-wrap gap-2 justify-center mb-6 sm:mb-8 md:mb-12 px-2"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground mr-1 sm:mr-2 md:mr-4">
             <Filter className="h-3 w-3 sm:h-4 sm:w-4" />
             <span className="hidden sm:inline">Filter by:</span>
@@ -333,7 +343,7 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
               {category}
             </Button>
           ))}
-        </div>
+        </motion.div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -341,21 +351,25 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -8 }}
+                className="group cursor-pointer"
               >
-                <Card className="group h-full hover:shadow-lg transition-all duration-300 border-border bg-card">
+                <Card className="h-full hover:shadow-2xl hover:border-primary/50 transition-all duration-300 border-2 border-border bg-card relative overflow-hidden">
                   {/* Impact Badge Overlay */}
                   <div className="relative">
                     <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
                       <img 
                         src={project.thumbnailUrl} 
                         alt={project.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
+                      {/* Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
                     </div>
                     {/* Status Badge */}
                     <div className="absolute top-3 right-3">
@@ -441,6 +455,9 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
                       </div>
                     </div>
                   </CardContent>
+                  
+                  {/* Hover Effect Indicator */}
+                  <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/20 rounded-lg transition-all duration-300 pointer-events-none"></div>
                 </Card>
               </motion.div>
             ))}
@@ -448,31 +465,37 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
         </div>
 
         {filteredProjects.length === 0 && (
-          <div className="text-center py-12">
+          <motion.div 
+            className="text-center py-12"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          >
             <p className="text-muted-foreground">No projects found for the selected category.</p>
-          </div>
+          </motion.div>
         )}
       </div>
 
       {/* Project Detail Modal */}
       <Dialog open={!!selectedProject} onOpenChange={closeProjectModal}>
+        <AnimatePresence>
         {selectedProject && (
-          <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-            <DialogHeader>
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <DialogTitle className="text-2xl font-display mb-2">
+          <DialogContent className="max-w-[95vw] sm:max-w-[85vw] md:max-w-3xl lg:max-w-4xl max-h-[95vh] sm:max-h-[90vh] overflow-y-auto p-4 sm:p-6">
+            <DialogHeader className="space-y-3 pb-4">
+              <div className="flex items-start justify-between gap-3">
+                <div className="flex-1 min-w-0">
+                  <DialogTitle className="text-lg sm:text-xl md:text-2xl font-display mb-2 leading-tight pr-8">
                     {selectedProject.title}
                   </DialogTitle>
-                  <DialogDescription className="text-base">
+                  <Badge variant="secondary" className="mb-3">{selectedProject.category}</Badge>
+                  <DialogDescription className="text-xs sm:text-sm md:text-base leading-relaxed">
                     {selectedProject.longDescription}
                   </DialogDescription>
                 </div>
-                <Badge variant="secondary">{selectedProject.category}</Badge>
               </div>
             </DialogHeader>
 
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {/* Image Carousel */}
               <div className="relative aspect-video bg-muted rounded-lg overflow-hidden">
                 <img 
@@ -486,28 +509,30 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
                     <Button
                       size="sm"
                       variant="secondary"
-                      className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 p-0"
+                      className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 p-0 backdrop-blur-sm bg-background/80"
                       onClick={handlePreviousImage}
                     >
-                      <ChevronLeft className="h-4 w-4" />
+                      <ChevronLeft className="h-3 w-3 sm:h-4 sm:w-4" />
                     </Button>
                     <Button
                       size="sm"
                       variant="secondary"
-                      className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 p-0"
+                      className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 p-0 backdrop-blur-sm bg-background/80"
                       onClick={handleNextImage}
                     >
-                      <ChevronRight className="h-4 w-4" />
+                      <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4" />
                     </Button>
                     
                     <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
                       {selectedProject.screenshots.map((_, index) => (
-                        <button
+                        <motion.button
                           key={index}
-                          className={`w-2 h-2 rounded-full transition-colors ${
-                            index === currentImageIndex ? 'bg-white' : 'bg-white/50'
+                          className={`rounded-full transition-all duration-300 ${
+                            index === currentImageIndex ? 'bg-white w-6 sm:w-8 h-1.5 sm:h-2' : 'bg-white/50 w-1.5 sm:w-2 h-1.5 sm:h-2'
                           }`}
                           onClick={() => setCurrentImageIndex(index)}
+                          whileHover={{ scale: 1.2 }}
+                          whileTap={{ scale: 0.9 }}
                         />
                       ))}
                     </div>
@@ -516,73 +541,86 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
               </div>
 
               {/* Project Details Grid */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-6">
+                {/* Technology Stack - Now at top for better mobile UX */}
+                <div>
+                  <h4 className="font-semibold mb-3 text-sm sm:text-base flex items-center gap-2">
+                    <span className="text-primary">🛠️</span> Technology Stack
+                  </h4>
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                    {selectedProject.techStack.map((tech) => (
+                      <Badge key={tech} variant="outline" className="text-xs">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Duration & Role */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 p-3 sm:p-4 bg-muted/50 rounded-lg">
+                  <div>
+                    <span className="text-xs sm:text-sm text-muted-foreground flex items-center gap-1.5 mb-1">
+                      <Calendar className="h-3 w-3" />
+                      Duration
+                    </span>
+                    <p className="font-medium text-sm sm:text-base">{selectedProject.duration}</p>
+                  </div>
+                  <div>
+                    <span className="text-xs sm:text-sm text-muted-foreground flex items-center gap-1.5 mb-1">
+                      <User className="h-3 w-3" />
+                      Role
+                    </span>
+                    <p className="font-medium text-sm sm:text-base">{selectedProject.role}</p>
+                  </div>
+                </div>
+
                 {/* Features */}
                 <div>
-                  <h4 className="font-semibold mb-3">Key Achievements & Features</h4>
-                  <ul className="space-y-2">
+                  <h4 className="font-semibold mb-3 text-sm sm:text-base flex items-center gap-2">
+                    <span className="text-primary">✨</span> Key Achievements & Features
+                  </h4>
+                  <ul className="space-y-2 sm:space-y-2.5">
                     {selectedProject.features.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-2 text-sm">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0" />
-                        <span>{feature}</span>
+                      <li key={index} className="flex items-start gap-2 text-xs sm:text-sm leading-relaxed">
+                        <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-primary rounded-full mt-1.5 sm:mt-2 shrink-0" />
+                        <span className="flex-1">{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-
-                {/* Tech & Details */}
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold mb-3">Technology Stack</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {selectedProject.techStack.map((tech) => (
-                        <Badge key={tech} variant="outline">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 gap-4 text-sm">
-                    <div>
-                      <span className="text-muted-foreground">Duration:</span>
-                      <p className="font-medium">{selectedProject.duration}</p>
-                    </div>
-                    <div>
-                      <span className="text-muted-foreground">Role:</span>
-                      <p className="font-medium">{selectedProject.role}</p>
-                    </div>
-                  </div>
-                </div>
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-3 pt-4 border-t">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-4 border-t">
                 {selectedProject.liveUrl && (
-                  <Button asChild className="flex-1">
+                  <Button asChild className="flex-1 w-full" size="sm">
                     <a href={selectedProject.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Try Live Demo
+                      <ExternalLink className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-2" />
+                      <span className="text-xs sm:text-sm">Try Live Demo</span>
                     </a>
                   </Button>
                 )}
-                <Button variant="outline" asChild className="flex-1">
-                  <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer">
-                    <Github className="h-4 w-4 mr-2" />
-                    View Code
-                  </a>
-                </Button>
-                <Button 
-                  variant="outline"
-                  onClick={() => handleCopyUrl(selectedProject.liveUrl || selectedProject.githubUrl, selectedProject.title)}
-                  className="px-4"
-                >
-                  <Copy className="h-4 w-4" />
-                </Button>
+                <div className="flex gap-2 sm:gap-3">
+                  <Button variant="outline" asChild className="flex-1" size="sm">
+                    <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <Github className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-2" />
+                      <span className="text-xs sm:text-sm">View Code</span>
+                    </a>
+                  </Button>
+                  <Button 
+                    variant="outline"
+                    size="sm"
+                    onClick={() => handleCopyUrl(selectedProject.liveUrl || selectedProject.githubUrl, selectedProject.title)}
+                    className="px-3 sm:px-4"
+                  >
+                    <Copy className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                  </Button>
+                </div>
               </div>
             </div>
           </DialogContent>
         )}
+        </AnimatePresence>
       </Dialog>
     </section>
   )

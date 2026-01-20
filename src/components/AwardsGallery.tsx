@@ -164,15 +164,15 @@ export default function AwardsGallery({ className = '' }: AwardsGalleryProps) {
               >
                 <div className="relative bg-card border-2 border-border rounded-xl overflow-hidden hover:shadow-2xl hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-2">
                   {/* Image with Overlay */}
-                  <div className="relative aspect-[4/3] overflow-hidden">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-muted flex items-center justify-center">
                     <img 
                       src={award.imageUrl} 
                       alt={award.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className={`w-full h-full ${award.id === 'competition-winner' ? 'object-cover scale-140' : 'object-cover'} group-hover:scale-105 transition-transform duration-500`}
                       loading="lazy"
                     />
                     {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
                     
                     {/* Badge on Image */}
                     <div className="absolute top-2 sm:top-3 md:top-4 left-2 sm:left-3 md:left-4">
@@ -263,7 +263,7 @@ export default function AwardsGallery({ className = '' }: AwardsGalleryProps) {
                 )}
 
                 {/* Image Container */}
-                <div className="relative aspect-video bg-black/95">
+                <div className="relative aspect-video bg-black/95 flex items-center justify-center">
                   <img 
                     src={selectedAward.imageUrl} 
                     alt={selectedAward.title}
