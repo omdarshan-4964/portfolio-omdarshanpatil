@@ -36,7 +36,7 @@ export default function Hero({ className = "" }: HeroProps) {
 
   return (
     <TooltipProvider>
-      <section className={`relative py-12 md:py-16 lg:py-24 overflow-hidden ${className}`}>
+      <section className={`relative py-8 sm:py-12 md:py-16 lg:py-24 overflow-hidden ${className}`}>
         {/* Animated Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/30 to-background">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
@@ -45,7 +45,7 @@ export default function Hero({ className = "" }: HeroProps) {
 
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           {/* Main Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center">
             
             {/* Left Column - Profile Card */}
             <div className="flex justify-center lg:justify-start">
@@ -53,7 +53,7 @@ export default function Hero({ className = "" }: HeroProps) {
                 {/* Glow Effect */}
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-purple-500 to-pink-500 rounded-lg opacity-0 group-hover:opacity-20 blur transition duration-500"></div>
                 
-                <CardContent className="relative p-8 space-y-6">
+                <CardContent className="relative p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6">
                   {/* Avatar Section with Enhanced Design */}
                   <div className="flex justify-center">
                     <div className="relative group/avatar">
@@ -61,7 +61,7 @@ export default function Hero({ className = "" }: HeroProps) {
                       <div className="absolute inset-0 bg-gradient-to-r from-primary via-purple-500 to-pink-500 rounded-full blur-md animate-pulse"></div>
                       <div className="absolute inset-0 bg-gradient-to-r from-primary via-purple-500 to-pink-500 rounded-full blur-sm opacity-75"></div>
                       
-                      <Avatar className="h-44 w-44 relative border-4 border-background shadow-xl ring-2 ring-primary/50 group-hover/avatar:ring-primary transition-all duration-300">
+                      <Avatar className="h-32 w-32 sm:h-40 sm:w-40 md:h-44 md:w-44 relative border-4 border-background shadow-xl ring-2 ring-primary/50 group-hover/avatar:ring-primary transition-all duration-300">
                         <AvatarImage
                           src="/profile.jpeg"
                           alt="Omdarshan Uttam Shindepatil"
@@ -176,7 +176,7 @@ export default function Hero({ className = "" }: HeroProps) {
               {/* Main Heading */}
               <div className="space-y-6">
                 <div className="space-y-3">
-                  <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-black tracking-tight leading-[1.1]">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-black tracking-tight leading-[1.1]">
                     <span className="relative inline-block">
                       <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-600 to-pink-600 animate-gradient">
                         OMDARSHAN
@@ -199,9 +199,9 @@ export default function Hero({ className = "" }: HeroProps) {
                 </div>
 
                 {/* Professional Summary */}
-                <div className="relative p-6 rounded-xl bg-gradient-to-br from-secondary/50 to-secondary/30 border border-border/50 backdrop-blur-sm">
+                <div className="relative p-4 sm:p-5 md:p-6 rounded-xl bg-gradient-to-br from-secondary/50 to-secondary/30 border border-border/50 backdrop-blur-sm">
                   <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary to-purple-600 rounded-l-xl"></div>
-                  <p className="text-base lg:text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
                     Engineering Agentic AI Systems & Scalable Cloud Architecture. Specialized in building high-performance engines using Next.js 16, Distributed Systems, and Fan-Out Architectures. Proven expertise in real-time collaborative platforms and enterprise-grade authentication systems.
                   </p>
                 </div>
@@ -215,14 +215,14 @@ export default function Hero({ className = "" }: HeroProps) {
                   <div className="h-px flex-1 bg-gradient-to-l from-transparent via-border to-border"></div>
                 </div>
                 
-                <div className="flex flex-wrap gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <Button
                         variant="outline"
                         size="default"
                         onClick={() => copyToClipboard("omdarshanpatil@gmail.com", "Email")}
-                        className="flex-1 sm:flex-none group hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
+                        className="w-full group hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
                       >
                         <Mail className="h-4 w-4 mr-2 group-hover:text-primary transition-colors" />
                         <span className="font-medium">Email</span>
@@ -240,7 +240,7 @@ export default function Hero({ className = "" }: HeroProps) {
                         variant="outline"
                         size="default"
                         onClick={() => copyToClipboard("+91 9359037001", "Phone")}
-                        className="flex-1 sm:flex-none group hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
+                        className="w-full group hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
                       >
                         <Phone className="h-4 w-4 mr-2 group-hover:text-primary transition-colors" />
                         <span className="font-medium">+91 9359037001</span>
@@ -262,13 +262,13 @@ export default function Hero({ className = "" }: HeroProps) {
                   <div className="h-px flex-1 bg-gradient-to-l from-transparent via-border to-border"></div>
                 </div>
                 
-                <div className="flex flex-wrap gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
                   {/* Social Links */}
                   <Button
                     variant="outline"
                     size="default"
                     onClick={() => window.open("https://github.com/omdarshan-4964", "_blank")}
-                    className="group hover:border-primary/50 hover:bg-primary/5"
+                    className="w-full group hover:border-primary/50 hover:bg-primary/5"
                   >
                     <Github className="h-4 w-4 mr-2 group-hover:text-primary transition-colors" />
                     GitHub
@@ -279,7 +279,7 @@ export default function Hero({ className = "" }: HeroProps) {
                     variant="outline"
                     size="default"
                     onClick={() => window.open("https://www.linkedin.com/in/omdarshanshindepatil/", "_blank")}
-                    className="group hover:border-blue-500/50 hover:bg-blue-500/5"
+                    className="w-full group hover:border-blue-500/50 hover:bg-blue-500/5"
                   >
                     <Linkedin className="h-4 w-4 mr-2 group-hover:text-blue-600 transition-colors" />
                     LinkedIn
@@ -290,7 +290,7 @@ export default function Hero({ className = "" }: HeroProps) {
                     variant="outline"
                     size="default"
                     onClick={() => window.open("https://x.com/Omdarshan_jsx", "_blank")}
-                    className="group hover:border-primary/50 hover:bg-primary/5"
+                    className="w-full group hover:border-primary/50 hover:bg-primary/5"
                   >
                     <svg className="h-4 w-4 mr-2 group-hover:text-primary transition-colors" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -301,11 +301,11 @@ export default function Hero({ className = "" }: HeroProps) {
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-wrap gap-3 pt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                   <Button
                     size="lg"
                     onClick={handleDownloadResume}
-                    className="group bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="w-full group bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 shadow-lg hover:shadow-xl transition-all duration-300"
                   >
                     <Download className="h-4 w-4 mr-2 group-hover:animate-bounce" />
                     Download Resume
@@ -315,7 +315,7 @@ export default function Hero({ className = "" }: HeroProps) {
                     size="lg"
                     variant="outline"
                     onClick={scrollToContact}
-                    className="group hover:border-primary/50 hover:bg-primary/5"
+                    className="w-full group hover:border-primary/50 hover:bg-primary/5"
                   >
                     <Mail className="h-4 w-4 mr-2 group-hover:text-primary transition-colors" />
                     Get In Touch

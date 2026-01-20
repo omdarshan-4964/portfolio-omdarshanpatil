@@ -37,51 +37,51 @@ const educationData: Education[] = [
 
 export default function EducationSection() {
   return (
-    <section id="education" className="py-16 px-4 bg-gradient-to-b from-secondary/20 to-background">
+    <section id="education" className="py-8 sm:py-12 md:py-16 px-4 bg-gradient-to-b from-secondary/20 to-background">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <GraduationCap className="h-10 w-10 text-primary" />
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
+          <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+            <GraduationCap className="h-8 w-8 sm:h-10 sm:w-10 text-primary" />
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
               Education
             </h2>
           </div>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-4">
             Academic journey showcasing <span className="font-semibold text-foreground">strong fundamentals</span> and <span className="font-semibold text-foreground">consistent excellence</span>
           </p>
         </div>
 
         {/* Education Cards */}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {educationData.map((edu, index) => (
             <Card 
               key={index}
               className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30"
             >
-              <CardHeader className="pb-4">
-                <div className="flex items-start justify-between gap-4">
+              <CardHeader className="pb-3 sm:pb-4 p-4 sm:p-6">
+                <div className="flex items-start justify-between gap-3 sm:gap-4">
                   <div className="flex-1">
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                    <CardTitle className="text-base sm:text-lg md:text-xl group-hover:text-primary transition-colors">
                       {edu.degree}
                     </CardTitle>
-                    <p className="text-base text-muted-foreground mt-2 font-semibold">
+                    <p className="text-sm sm:text-base text-muted-foreground mt-1.5 sm:mt-2 font-semibold">
                       {edu.institution}
                     </p>
                   </div>
-                  <div className="p-3 rounded-lg bg-gradient-to-br from-primary to-purple-600 shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                    <GraduationCap className="h-6 w-6 text-white" />
+                  <div className="p-2.5 sm:p-3 rounded-lg bg-gradient-to-br from-primary to-purple-600 shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                    <GraduationCap className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                   </div>
                 </div>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-                  <span className="flex items-center gap-2">
-                    <MapPin className="h-4 w-4" />
+              <CardContent className="space-y-3 sm:space-y-4 p-4 sm:p-6 pt-0">
+                <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground">
+                  <span className="flex items-center gap-1.5 sm:gap-2">
+                    <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                     {edu.location}
                   </span>
-                  <span className="flex items-center gap-2">
-                    <Calendar className="h-4 w-4" />
+                  <span className="flex items-center gap-1.5 sm:gap-2">
+                    <Calendar className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                     {edu.date}
                   </span>
                 </div>

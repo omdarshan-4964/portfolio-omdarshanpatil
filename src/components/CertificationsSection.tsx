@@ -83,40 +83,40 @@ export default function CertificationsSection() {
   const hackerRankCerts = certifications.filter(c => c.type === "hackerrank")
 
   return (
-    <section id="certifications" className="py-16 px-4 bg-background">
+    <section id="certifications" className="py-8 sm:py-12 md:py-16 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Award className="h-10 w-10 text-primary" />
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
+          <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+            <Award className="h-8 w-8 sm:h-10 sm:w-10 text-primary" />
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
               Certifications
             </h2>
           </div>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-4">
             Industry-recognized certifications validating <span className="font-semibold text-foreground">technical expertise</span> and <span className="font-semibold text-foreground">problem-solving abilities</span>
           </p>
         </div>
 
         {/* Professional Certifications */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
-            <div className="h-1 w-12 bg-gradient-to-r from-primary to-purple-600 rounded-full"></div>
+        <div className="mb-10 sm:mb-12 md:mb-16">
+          <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 flex items-center gap-2 px-2">
+            <div className="h-1 w-8 sm:w-12 bg-gradient-to-r from-primary to-purple-600 rounded-full"></div>
             Professional Certifications
           </h3>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {professionalCerts.map((cert, index) => (
               <Card 
                 key={index}
                 className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30"
               >
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className={`p-3 rounded-lg bg-gradient-to-br ${cert.color} shadow-md group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
-                      <Award className="h-6 w-6 text-white" />
+                <CardContent className="p-4 sm:p-5 md:p-6">
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <div className={`p-2 sm:p-2.5 md:p-3 rounded-lg bg-gradient-to-br ${cert.color} shadow-md group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
+                      <Award className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                     </div>
-                    <div className="flex-1 space-y-2">
-                      <h4 className="font-bold text-lg group-hover:text-primary transition-colors">
+                    <div className="flex-1 space-y-1.5 sm:space-y-2">
+                      <h4 className="font-bold text-base sm:text-lg group-hover:text-primary transition-colors">
                         {cert.name}
                       </h4>
                       <p className="text-sm text-muted-foreground flex items-center gap-2">
@@ -136,22 +136,22 @@ export default function CertificationsSection() {
 
         {/* HackerRank Certifications */}
         <div>
-          <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
-            <div className="h-1 w-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></div>
+          <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 flex items-center gap-2 px-2">
+            <div className="h-1 w-8 sm:w-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></div>
             HackerRank Certifications
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {hackerRankCerts.map((cert, index) => (
               <Card 
                 key={index}
                 className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2"
               >
-                <CardContent className="p-6 text-center space-y-4">
-                  <div className={`mx-auto w-16 h-16 rounded-full bg-gradient-to-br ${cert.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    <Award className="h-8 w-8 text-white" />
+                <CardContent className="p-4 sm:p-5 md:p-6 text-center space-y-3 sm:space-y-4">
+                  <div className={`mx-auto w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br ${cert.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <Award className="h-7 w-7 sm:h-8 sm:w-8 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">
+                    <h4 className="font-bold text-base sm:text-lg mb-1.5 sm:mb-2 group-hover:text-primary transition-colors">
                       {cert.name}
                     </h4>
                     {cert.badge && (
@@ -168,8 +168,8 @@ export default function CertificationsSection() {
           </div>
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-8 sm:mt-10 md:mt-12 text-center px-4">
+          <p className="text-xs sm:text-sm text-muted-foreground">
             Total: <span className="font-semibold text-foreground">{certifications.length}</span> verified certifications demonstrating continuous learning and skill development
           </p>
         </div>

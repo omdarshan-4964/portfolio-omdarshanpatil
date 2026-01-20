@@ -301,13 +301,13 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
   }, [selectedProject, handlePreviousImage, handleNextImage, closeProjectModal])
 
   return (
-    <section className={`py-12 md:py-16 lg:py-20 ${className}`}>
+    <section className={`py-8 sm:py-12 md:py-16 lg:py-20 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10 md:mb-12 space-y-3 md:space-y-4">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">
+        <div className="text-center mb-8 md:mb-10 lg:mb-12 space-y-2 md:space-y-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight px-2">
             Featured <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">Projects</span>
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
             Production-grade applications showcasing expertise in <span className="text-foreground font-semibold">Agentic AI Systems</span>, 
             <span className="text-foreground font-semibold"> Next.js Architecture</span>, and 
             <span className="text-foreground font-semibold"> Real-Time Distributed Systems</span>. 
@@ -316,10 +316,11 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
         </div>
 
         {/* Filter Bar */}
-        <div className="flex flex-wrap gap-2 md:gap-3 justify-center mb-8 md:mb-12 px-4">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground mr-2 md:mr-4">
-            <Filter className="h-4 w-4" />
-            <span>Filter by:</span>
+        <div className="flex flex-wrap gap-2 justify-center mb-6 sm:mb-8 md:mb-12 px-2">
+          <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground mr-1 sm:mr-2 md:mr-4">
+            <Filter className="h-3 w-3 sm:h-4 sm:w-4" />
+            <span className="hidden sm:inline">Filter by:</span>
+            <span className="sm:hidden">Filter:</span>
           </div>
           {CATEGORIES.map((category) => (
             <Button
@@ -327,7 +328,7 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
               variant={selectedCategory === category ? 'default' : 'outline'}
               size="sm"
               onClick={() => setSelectedCategory(category)}
-              className="transition-all duration-200 text-xs md:text-sm"
+              className="transition-all duration-200 text-xs px-3 py-1.5"
             >
               {category}
             </Button>
@@ -364,9 +365,9 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
                     </div>
                   </div>
                   
-                  <CardHeader className="pb-3">
-                    <div className="flex items-start justify-between gap-3">
-                      <CardTitle className="text-lg font-display group-hover:text-primary transition-colors leading-tight">
+                  <CardHeader className="pb-3 p-4 sm:p-6">
+                    <div className="flex items-start justify-between gap-2 sm:gap-3">
+                      <CardTitle className="text-base sm:text-lg font-display group-hover:text-primary transition-colors leading-tight">
                         {project.title}
                       </CardTitle>
                       <Badge variant="secondary" className="shrink-0 text-xs">
@@ -378,7 +379,7 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
                     </CardDescription>
                   </CardHeader>
 
-                  <CardContent className="space-y-4">
+                  <CardContent className="space-y-3 sm:space-y-4 p-4 sm:p-6 pt-0">
                     {/* Tech Stack */}
                     <div className="flex flex-wrap gap-1">
                       {project.techStack.slice(0, 4).map((tech) => (
@@ -406,12 +407,12 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="flex gap-2 pt-2">
+                    <div className="flex flex-col sm:flex-row gap-2 pt-2">
                       {project.liveUrl && (
                         <Button 
                           size="sm" 
                           asChild
-                          className="flex-1"
+                          className="w-full sm:flex-1"
                         >
                           <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="h-4 w-4 mr-1" />
@@ -419,23 +420,25 @@ export default function ProjectsSection({ className = '' }: ProjectsSectionProps
                           </a>
                         </Button>
                       )}
-                      <Button 
-                        size="sm" 
-                        variant="outline"
-                        className={project.liveUrl ? "flex-1" : "flex-1"}
-                        onClick={() => openProjectModal(project)}
-                      >
-                        View Details
-                      </Button>
-                      <Button 
-                        size="sm" 
-                        variant="outline"
-                        className="px-3"
-                      >
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                          <Github className="h-4 w-4" />
-                        </a>
-                      </Button>
+                      <div className="flex gap-2">
+                        <Button 
+                          size="sm" 
+                          variant="outline"
+                          className="flex-1"
+                          onClick={() => openProjectModal(project)}
+                        >
+                          View Details
+                        </Button>
+                        <Button 
+                          size="sm" 
+                          variant="outline"
+                          className="px-3"
+                        >
+                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                            <Github className="h-4 w-4" />
+                          </a>
+                        </Button>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>

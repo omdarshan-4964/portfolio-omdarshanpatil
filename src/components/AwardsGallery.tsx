@@ -134,23 +134,23 @@ export default function AwardsGallery({ className = '' }: AwardsGalleryProps) {
   }, [selectedAward, goToPrevious, goToNext, closeLightbox])
 
   return (
-    <section className={`py-16 px-4 bg-gradient-to-b from-background to-secondary/20 ${className}`}>
+    <section className={`py-8 sm:py-12 md:py-16 px-4 bg-gradient-to-b from-background to-secondary/20 ${className}`}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Trophy className="h-10 w-10 text-primary" />
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
+          <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+            <Trophy className="h-8 w-8 sm:h-10 sm:w-10 text-primary" />
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
               Awards & Achievements
             </h2>
           </div>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-4">
             Recognition for <span className="font-semibold text-foreground">academic excellence</span>, <span className="font-semibold text-foreground">leadership roles</span>, and <span className="font-semibold text-foreground">technical innovation</span>
           </p>
         </div>
 
         {/* Awards Grid - Masonry Style */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {AWARDS.map((award, index) => {
             const IconComponent = CATEGORY_ICONS[award.category]
             return (
@@ -175,8 +175,8 @@ export default function AwardsGallery({ className = '' }: AwardsGalleryProps) {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
                     
                     {/* Badge on Image */}
-                    <div className="absolute top-4 left-4">
-                      <Badge className={`text-xs font-semibold backdrop-blur-sm ${
+                    <div className="absolute top-2 sm:top-3 md:top-4 left-2 sm:left-3 md:left-4">
+                      <Badge className={`text-[10px] sm:text-xs font-semibold backdrop-blur-sm ${
                         award.category === 'Leadership' 
                           ? 'bg-green-500/90 text-white border-green-400' 
                           : 'bg-yellow-500/90 text-white border-yellow-400'
@@ -187,16 +187,16 @@ export default function AwardsGallery({ className = '' }: AwardsGalleryProps) {
                     </div>
 
                     {/* Year Badge */}
-                    <div className="absolute top-4 right-4">
-                      <Badge variant="secondary" className="text-xs font-semibold backdrop-blur-sm bg-background/90">
+                    <div className="absolute top-2 sm:top-3 md:top-4 right-2 sm:right-3 md:right-4">
+                      <Badge variant="secondary" className="text-[10px] sm:text-xs font-semibold backdrop-blur-sm bg-background/90">
                         {award.date}
                       </Badge>
                     </div>
                   </div>
 
                   {/* Content */}
-                  <div className="p-5 space-y-3">
-                    <h3 className="font-bold text-lg leading-tight group-hover:text-primary transition-colors line-clamp-2">
+                  <div className="p-4 sm:p-5 space-y-2 sm:space-y-3">
+                    <h3 className="font-bold text-base sm:text-lg leading-tight group-hover:text-primary transition-colors line-clamp-2">
                       {award.title}
                     </h3>
                     <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">

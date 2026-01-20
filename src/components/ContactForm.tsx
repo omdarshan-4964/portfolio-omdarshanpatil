@@ -59,31 +59,31 @@ export default function ContactForm({ className }: ContactFormProps) {
   return (
     <div className={`max-w-4xl mx-auto ${className}`}>
       <Card className="bg-card">
-        <CardHeader className="text-center">
-          <CardTitle className="text-3xl md:text-4xl font-display bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">
+        <CardHeader className="text-center p-4 sm:p-6">
+          <CardTitle className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 px-2">
             Open to Full-Time Roles (July 2026)
           </CardTitle>
-          <CardDescription className="text-base mt-2">
+          <CardDescription className="text-sm sm:text-base mt-2">
             Seeking full-time software engineering opportunities starting July 2026
           </CardDescription>
         </CardHeader>
-        <CardContent className="space-y-8">
+        <CardContent className="space-y-6 sm:space-y-8 p-4 sm:p-6">
           {/* Contact Methods Grid */}
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2">
             {contactMethods.map((method, index) => {
               const Icon = method.icon
               return (
                 <Card key={index} className="border-2 hover:border-primary/50 transition-colors">
-                  <CardContent className="pt-6">
-                    <div className="flex items-start gap-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                        <Icon className="h-6 w-6 text-primary" />
+                  <CardContent className="pt-4 sm:pt-6 p-4">
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-lg bg-primary/10">
+                        <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-medium text-muted-foreground mb-1">
                           {method.label}
                         </p>
-                        <p className="text-sm font-semibold truncate mb-3">
+                        <p className="text-xs sm:text-sm font-semibold truncate mb-2 sm:mb-3">
                           {method.value}
                         </p>
                         <div className="flex gap-2">
@@ -120,9 +120,9 @@ export default function ContactForm({ className }: ContactFormProps) {
 
           {/* Quick Info Banner */}
           <Card className="bg-gradient-to-r from-blue-500/10 to-purple-600/10 border-primary/20">
-            <CardContent className="pt-6">
+            <CardContent className="pt-4 sm:pt-6 p-4">
               <div className="text-center space-y-2">
-                <p className="text-sm font-medium">
+                <p className="text-xs sm:text-sm font-medium">
                   🚀 Open to opportunities in Full-Stack Development, MERN Stack, and AI Integration
                 </p>
                 <p className="text-xs text-muted-foreground">

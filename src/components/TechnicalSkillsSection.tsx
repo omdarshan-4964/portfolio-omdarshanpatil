@@ -57,13 +57,13 @@ const skillsData = [
 
 export default function TechnicalSkillsSection() {
   return (
-    <section id="skills" className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-background to-secondary/20">
+    <section id="skills" className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-background to-secondary/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent px-2">
             Technical Skills
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4">
             Comprehensive technical expertise across <span className="font-semibold text-foreground">full-stack development</span>, <span className="font-semibold text-foreground">security</span>, and <span className="font-semibold text-foreground">cloud technologies</span>
           </p>
         </div>
@@ -76,12 +76,12 @@ export default function TechnicalSkillsSection() {
                 key={index} 
                 className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/50 hover:-translate-y-1"
               >
-                <div className="p-6 space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className={`p-2.5 rounded-lg bg-gradient-to-br ${skillGroup.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon className="h-5 w-5 text-white" />
+                <div className="p-4 sm:p-5 md:p-6 space-y-3 sm:space-y-4">
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <div className={`p-2 sm:p-2.5 rounded-lg bg-gradient-to-br ${skillGroup.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                     </div>
-                    <h3 className="font-bold text-base group-hover:text-primary transition-colors">
+                    <h3 className="font-bold text-sm sm:text-base group-hover:text-primary transition-colors">
                       {skillGroup.category}
                     </h3>
                   </div>
@@ -103,8 +103,8 @@ export default function TechnicalSkillsSection() {
           })}
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-8 sm:mt-10 md:mt-12 text-center px-4">
+          <p className="text-xs sm:text-sm text-muted-foreground">
             Continuously expanding skillset through hands-on projects and production deployments
           </p>
         </div>

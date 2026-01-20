@@ -67,6 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
         <link rel="canonical" href="https://portfolio-omdarshanpatil.vercel.app" />
       </head>
       <body className="antialiased">  
