@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# documentation
+PORTFOLIO_AUDIT.md
+AI_PORTFOLIO_BUILDER_PROMPT.md
+AI_PORTFOLIO_IMAGE_IMPLEMENTATION_PROMPT.md
